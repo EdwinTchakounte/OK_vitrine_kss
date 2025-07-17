@@ -28,7 +28,7 @@ function App() {
         <FAQ />
         <Contact />
         <Footer />
-        <WhatsAppButton />
+  
       </div>
     </LanguageProvider>
   );
