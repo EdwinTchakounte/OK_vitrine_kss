@@ -18,7 +18,7 @@ function App() {
     <LanguageProvider>
       <div className="min-h-screen bg-white">
         <Header />
-        <Hero />
+        {/* <Hero /> */}
         <About />
         <Programs />
         <Steps />
@@ -28,7 +28,7 @@ function App() {
         <FAQ />
         <Contact />
         <Footer />
-  
+        {/* <WhatsAppButton /> */}
       </div>
     </LanguageProvider>
   );
