@@ -13,12 +13,12 @@ const Hero: React.FC = () => {
       subtitle: translations.hero.subtitle
     },
     {
-      image: 'https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      image: '/slides/slide2.png',
       title: 'Excellence Académique',
       subtitle: 'Rejoignez des milliers d\'étudiants qui ont réalisé leurs rêves'
     },
     {
-      image: 'https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      image: '/slides/slide1.png',
       title: 'Votre Avenir International',
       subtitle: 'Des opportunités d\'études dans les meilleures universités mondiales'
     }
@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
         <div className="mb-8">
           <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-            <span className="text-white font-bold text-2xl">KS</span>
+            <img src="/images/logo.png" alt="Description de l'image" />
           </div>
           <div className="mb-4">
             <div className="h-1 w-24 bg-gradient-to-r from-blue-400 to-green-400 mx-auto rounded-full"></div>

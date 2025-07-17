@@ -13,10 +13,10 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">KS</span>
+                <img src="/images/logo.png" alt="Description de l'image" />
               </div>
               <div>
-                <h3 className="font-bold text-lg">Khriststephen Saba</h3>
+                <h3 className="font-bold text-lg">Khrist'stephen Saba</h3>
                 <p className="text-sm text-gray-400">International Education</p>
               </div>
             </div>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-red-400 flex-shrink-0" />
-                <span className="text-gray-400">info@khriststephensaba.com</span>
+                <span className="text-gray-400">contact@ksies-scholarships.net</span>
               </li>
             </ul>
           </div>
@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
             </a>
           </div>
           <div className="text-center text-gray-400 text-sm">
-            <p>&copy; 2024 Khriststephen Saba International Education Services. Tous droits réservés.</p>
+            <p>&copy; 2024 Khrist'stephen Saba International Education Services. Tous droits réservés.</p>
           </div>
         </div>
       </div>

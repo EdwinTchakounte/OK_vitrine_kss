@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-600 to-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm sm:text-xl">KS</span>
+                <img src="/images/logo.png" alt="Description de l'image" />
               </div>
               <div className="ml-3 hidden sm:block">
                 <h1 className="text-sm font-bold text-gray-900">Khriststephen Saba</h1>
