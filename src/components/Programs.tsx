@@ -77,43 +77,43 @@ const Programs: React.FC = () => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center mb-12 bg-gray-100 rounded-2xl p-2">
+        <div className="flex flex-wrap justify-center mb-8 sm:mb-12 bg-gray-100 rounded-2xl p-2">
           {programs.map((program, index) => (
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200 m-1 ${
+              className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold transition-all duration-200 m-1 text-sm sm:text-base ${
                 activeTab === index
                   ? 'bg-white text-blue-600 shadow-md'
                   : 'text-gray-600 hover:text-blue-600'
               }`}
             >
-              <span className="text-2xl">{program.flag}</span>
+              <span className="text-lg sm:text-2xl">{program.flag}</span>
               <span>{program.country}</span>
             </button>
           ))}
         </div>
 
         {/* Program Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
             <img
               src={programs[activeTab].image}
               alt={programs[activeTab].country}
-              className="rounded-2xl shadow-2xl"
+              className="rounded-2xl shadow-2xl w-full h-64 sm:h-80 lg:h-auto object-cover"
             />
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <div>
-              <h3 className={`text-3xl font-bold bg-gradient-to-r ${programs[activeTab].color} bg-clip-text text-transparent mb-4`}>
+              <h3 className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${programs[activeTab].color} bg-clip-text text-transparent mb-4`}>
                 {programs[activeTab].country}
               </h3>
               
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {/* Benefits */}
                 <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
                     <Star className="w-5 h-5 text-yellow-500 mr-2" />
                     {translations.programs.benefits}
                   </h4>
@@ -121,7 +121,7 @@ const Programs: React.FC = () => {
                     {programs[activeTab].benefits.map((benefit, index) => (
                       <li key={index} className="flex items-start">
                         <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-600">{benefit}</span>
+                        <span className="text-sm sm:text-base text-gray-600">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -129,13 +129,13 @@ const Programs: React.FC = () => {
 
                 {/* Universities */}
                 <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
                     <GraduationCap className="w-5 h-5 text-blue-600 mr-2" />
                     Universités partenaires
                   </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 gap-2 sm:gap-3">
                     {programs[activeTab].universities.map((university, index) => (
-                      <div key={index} className="bg-gray-50 rounded-lg p-3 text-sm text-gray-700">
+                      <div key={index} className="bg-gray-50 rounded-lg p-2 sm:p-3 text-xs sm:text-sm text-gray-700">
                         {university}
                       </div>
                     ))}
@@ -144,12 +144,12 @@ const Programs: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-2 sm:pt-4">
               <a
                 href="https://wa.me/237693461841"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${programs[activeTab].color} text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-200`}
+                className={`w-full sm:w-auto inline-flex items-center justify-center px-4 sm:px-6 py-3 bg-gradient-to-r ${programs[activeTab].color} text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-200 text-sm sm:text-base`}
               >
                 <Users className="w-5 h-5 mr-2" />
                 {translations.common.apply}

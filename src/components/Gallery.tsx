@@ -52,11 +52,11 @@ const Gallery: React.FC = () => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-8 sm:mb-12">
           <div className="bg-gray-100 rounded-2xl p-2">
             <button
               onClick={() => setActiveTab('images')}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold transition-all duration-200 text-sm sm:text-base ${
                 activeTab === 'images'
                   ? 'bg-white text-blue-600 shadow-md'
                   : 'text-gray-600 hover:text-blue-600'
@@ -66,7 +66,7 @@ const Gallery: React.FC = () => {
             </button>
             <button
               onClick={() => setActiveTab('videos')}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold transition-all duration-200 text-sm sm:text-base ${
                 activeTab === 'videos'
                   ? 'bg-white text-blue-600 shadow-md'
                   : 'text-gray-600 hover:text-blue-600'
@@ -79,21 +79,21 @@ const Gallery: React.FC = () => {
 
         {/* Images Tab */}
         {activeTab === 'images' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {images.map((image, index) => (
               <div
                 key={index}
-                className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="relative group cursor-pointer overflow-hidden rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 onClick={() => setSelectedImage(image)}
               >
                 <img
                   src={image}
                   alt={`Gallery image ${index + 1}`}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-48 sm:h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <Play className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <Play className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                 </div>
               </div>
@@ -103,16 +103,16 @@ const Gallery: React.FC = () => {
 
         {/* Videos Tab */}
         {activeTab === 'videos' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {videos.map((video, index) => (
-              <div key={index} className="bg-gray-50 rounded-2xl p-6 shadow-lg">
-                <div className="relative mb-4">
+              <div key={index} className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
+                <div className="relative mb-3 sm:mb-4">
                   {playingVideo === video.id ? (
                     <div className="aspect-video">
                       <iframe
                         src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
                         title={video.title}
-                        className="w-full h-full rounded-xl"
+                        className="w-full h-full rounded-lg sm:rounded-xl"
                         allowFullScreen
                       ></iframe>
                     </div>
@@ -124,17 +124,17 @@ const Gallery: React.FC = () => {
                       <img
                         src={video.thumbnail}
                         alt={video.title}
-                        className="w-full aspect-video object-cover rounded-xl"
+                        className="w-full aspect-video object-cover rounded-lg sm:rounded-xl"
                       />
-                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-xl">
-                        <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors duration-200">
-                          <Play className="w-8 h-8 text-white ml-1" />
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg sm:rounded-xl">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors duration-200">
+                          <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" />
                         </div>
                       </div>
                     </div>
                   )}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                   {video.title}
                 </h3>
               </div>

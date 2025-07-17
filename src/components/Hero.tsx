@@ -110,7 +110,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-200 transform hover:scale-105"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-200 transform hover:scale-105 text-sm sm:text-base"
           >
             {translations.hero.cta}
           </button>
@@ -119,10 +119,10 @@ const Hero: React.FC = () => {
             href="https://wa.me/237693461841"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3 bg-green-500 text-white font-semibold rounded-full hover:bg-green-600 transition-all duration-200 transform hover:scale-105 flex items-center space-x-2"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-green-500 text-white font-semibold rounded-full hover:bg-green-600 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2 text-sm sm:text-base"
           >
             <span>{translations.hero.whatsapp}</span>
-            <Play className="w-4 h-4" />
+            <Play className="w-3 h-3 sm:w-4 sm:h-4" />
           </a>
         </div>
 

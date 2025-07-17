@@ -40,63 +40,63 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Informations de contact
               </h3>
               
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">
+                    <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                       {translations.contact.address}
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-sm sm:text-base">
                       Murcas Building, Akwa Douala, Cameroon
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-lg flex items-center justify-center">
                     <Phone className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">
+                    <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                       {translations.contact.phone}
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-sm sm:text-base">
                       +237 693 461 841<br />
                       +237 651 797 376
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 rounded-lg flex items-center justify-center">
                     <Mail className="w-6 h-6 text-purple-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">
+                    <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                       {translations.contact.email}
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-sm sm:text-base">
                       info@khriststephensaba.com
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
                     <Clock className="w-6 h-6 text-yellow-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">
+                    <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                       Horaires d'ouverture
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-sm sm:text-base">
                       Lundi - Vendredi: 8h00 - 18h00<br />
                       Samedi: 9h00 - 14h00
                     </p>
@@ -106,11 +106,11 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Google Maps */}
-            <div className="rounded-2xl overflow-hidden shadow-lg">
+            <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.6543!2d9.7081959!3d4.0481319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMDInNTMuMyJOIDnCsDQyJzI5LjUiRQ!5e0!3m2!1sen!2scm!4v1620000000000!5m2!1sen!2scm"
                 width="100%"
-                height="300"
+                height="250"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -121,14 +121,14 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-6 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
               Envoyez-nous un message
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                   {translations.contact.name}
                 </label>
                 <input
@@ -138,12 +138,12 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-sm sm:text-base"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                   {translations.contact.email}
                 </label>
                 <input
@@ -153,12 +153,12 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-sm sm:text-base"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                   {translations.contact.subject}
                 </label>
                 <input
@@ -168,12 +168,12 @@ const Contact: React.FC = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-sm sm:text-base"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                   {translations.contact.message}
                 </label>
                 <textarea
@@ -182,14 +182,14 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-none"
+                  rows={5}
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-none text-sm sm:text-base"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity duration-200"
+                className="w-full flex items-center justify-center px-4 sm:px-6 py-3 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm sm:text-base"
               >
                 <Send className="w-5 h-5 mr-2" />
                 {translations.contact.send}

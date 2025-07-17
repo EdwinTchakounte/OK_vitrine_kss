@@ -98,17 +98,17 @@ const Steps: React.FC = () => {
         </div>
 
         {/* Mobile Version */}
-        <div className="lg:hidden space-y-8">
+        <div className="lg:hidden space-y-6">
           {steps.map((step, index) => (
-            <div key={index} className="flex items-start space-x-4">
-              <div className={`w-12 h-12 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white flex-shrink-0`}>
-                <span className="font-bold">{step.number}</span>
+            <div key={index} className="flex items-start space-x-3 sm:space-x-4">
+              <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white flex-shrink-0`}>
+                <span className="font-bold text-sm sm:text-base">{step.number}</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
                   {step.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-sm sm:text-base text-gray-600">
                   {step.description}
                 </p>
               </div>
@@ -117,12 +117,12 @@ const Steps: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-12 sm:mt-16">
           <a
             href="https://wa.me/237693461841"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-200 shadow-lg"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-200 shadow-lg text-sm sm:text-base"
           >
             <MessageCircle className="w-5 h-5 mr-2" />
             Commencer maintenant
