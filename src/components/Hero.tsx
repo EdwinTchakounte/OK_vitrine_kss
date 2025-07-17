@@ -126,20 +126,6 @@ const Hero: React.FC = () => {
           </a>
         </div>
 
-        {/* African Pattern Decoration */}
-        <div className="absolute -top-20 -left-20 w-40 h-40 opacity-20">
-          <svg viewBox="0 0 100 100" className="w-full h-full text-yellow-400">
-            <path d="M50 10 L90 50 L50 90 L10 50 Z" fill="currentColor" />
-            <path d="M50 25 L75 50 L50 75 L25 50 Z" fill="none" stroke="currentColor" strokeWidth="2" />
-          </svg>
-        </div>
-        
-        <div className="absolute -bottom-20 -right-20 w-32 h-32 opacity-20">
-          <svg viewBox="0 0 100 100" className="w-full h-full text-red-400">
-            <circle cx="50" cy="50" r="40" fill="currentColor" />
-            <circle cx="50" cy="50" r="25" fill="none" stroke="white" strokeWidth="2" />
-          </svg>
-        </div>
       </div>
     </section>
   );

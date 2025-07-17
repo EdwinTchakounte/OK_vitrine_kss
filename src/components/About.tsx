@@ -87,16 +87,6 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* African Pattern Decoration */}
-        <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-64 h-64 opacity-5">
-          <svg viewBox="0 0 100 100" className="w-full h-full text-yellow-600">
-            <pattern id="african-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <path d="M10 0 L20 10 L10 20 L0 10 Z" fill="currentColor" />
-            </pattern>
-            <rect width="100" height="100" fill="url(#african-pattern)" />
-          </svg>
-        </div>
       </div>
     </section>
   );
