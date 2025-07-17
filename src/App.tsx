@@ -18,7 +18,7 @@ function App() {
     <LanguageProvider>
       <div className="min-h-screen bg-white">
         <Header />
-        <Hero />
+        
         <About />
         <Programs />
         <Steps />
