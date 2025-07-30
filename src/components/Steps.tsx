@@ -97,7 +97,7 @@ const Steps: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Version */}
+        {/* Mobile Version
         <div className="lg:hidden space-y-6">
           {steps.map((step, index) => (
             <div key={index} className="flex items-start space-x-3 sm:space-x-4">
@@ -114,7 +114,7 @@ const Steps: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Call to Action */}
         <div className="text-center mt-12 sm:mt-16">

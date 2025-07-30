@@ -3,7 +3,6 @@ import { LanguageProvider } from './contexts/LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import Programs from './components/Programs';
 import Steps from './components/Steps';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
@@ -15,26 +14,36 @@ import WhatsAppButton from './components/WhatsAppButton';
 import AcademicProgramsNavigator from './components/academic-programs-navigator';
 import AcademicProgramsApp from './components/academic-programs-navigator';
 import EducationResults from './components/Result';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import { ProgramDetailPage } from './components/programme_details';
 
 function App() {
+  
+
   return (
     <LanguageProvider>
+    <Router>
       <div className="min-h-screen bg-white">
         <Header />
-        <Hero />
-        <About />
-        <AcademicProgramsApp />
-        <Steps />
-        <Gallery />
-        <Testimonials />
-        <EducationResults />
-        <Partners />
-        <FAQ />
-        <Contact />
+        <main>
+          <Routes>
+          
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/programmes" element={<AcademicProgramsNavigator />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/detail_programme/:title/:type" element={<ProgramDetailPage/>} /> 
+          </Routes>
+        </main>
         <Footer />
         <WhatsAppButton />
       </div>
-    </LanguageProvider>
+    </Router></LanguageProvider>
   );
 }
 

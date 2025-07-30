@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronRight, BookOpen, Award, Globe, Users, GraduationCap, Brain, Target, ArrowLeft, CheckCircle, Calendar, ExternalLink, Mail, Phone } from 'lucide-react';
+import { ProgramDetailPage } from './programme_details';
+import Header from './Header';
+import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 // Composant Navigateur de Programmes
 const ProgramsNavigator = ({ onProgramSelect }) => {
@@ -40,6 +44,17 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
       dates: ['Rentrée septembre 2025', 'Candidatures jusqu\'au 31 mai'],
       type: 'study'
     },
+        {
+      id: 'MBA',
+      title: 'MBA',
+      icon: Brain,
+      summary: 'Programmes de MBA spécialisés dans les meilleures universités',
+      description: 'Spécialisez-vous dans votre domaine avec nos programmes master',
+      eligibility: ['Licence ou équivalent', 'Excellence académique', 'Projet professionnel clair'],
+      coverage: 'Frais de scolarité, accompagnement recherche, networking',
+      dates: ['Rentrée septembre 2025', 'Candidatures jusqu\'au 31 mai'],
+      type: 'study'
+    },
     {
       id: 'doctorat',
       title: 'Doctorat',
@@ -50,7 +65,32 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
       coverage: 'Financement recherche, laboratoires, publications',
       dates: ['Rentrée flexible', 'Candidatures permanentes'],
       type: 'study'
-    }
+    },
+       {
+      id: 'Langue Chinoise',
+      title: 'Langue Chinoise',
+      icon: Target,
+      summary: 'Recherche doctorale avec encadrement de qualité internationale',
+      description: 'Menez vos recherches doctorales dans un environnement d\'excellence',
+      eligibility: ['Master ou équivalent', 'Projet de recherche approuvé', 'Directeur de thèse identifié'],
+      coverage: 'Financement recherche, laboratoires, publications',
+      dates: ['Rentrée flexible', 'Candidatures permanentes'],
+      type: 'study'
+    },
+
+     {
+      id: 'Stage Academique',
+      title: 'Stage Academique',
+      icon: Target,
+      summary: 'Recherche doctorale avec encadrement de qualité internationale',
+      description: 'Menez vos recherches doctorales dans un environnement d\'excellence',
+      eligibility: ['Master ou équivalent', 'Projet de recherche approuvé', 'Directeur de thèse identifié'],
+      coverage: 'Financement recherche, laboratoires, publications',
+      dates: ['Rentrée flexible', 'Candidatures permanentes'],
+      type: 'study'
+    },
+    
+
   ];
 
   // Données des programmes de bourses
@@ -148,9 +188,13 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
   const currentPrograms = activeTab === 'studies' ? studyPrograms : scholarshipPrograms;
 
   const ProgramCard = ({ program }) => (
+      //  <Link to={`/detail_programme/${selectedProgram}/${handleBackToPrograms}`} className="flex items-center text-blue-600 hover:text-blue-800">  
+    //   <ArrowLeft className="w-4 h-4 mr-2" />
+    //   <span>Retour aux programmes</span>
+    //   </Link>
     <div 
       className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer border border-gray-100"
-      onClick={() => onProgramSelect(program)}
+      // onClick={() => onProgramSelect(program)}
     >
       <div className="p-6">
         <div className="flex items-start space-x-4">
@@ -163,7 +207,10 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">{program.title}</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">{program.summary}</p>
             <div className="flex items-center text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors">
-              <span>En savoir plus</span>
+              <span>
+               
+                <Link to={`/detail_programme/${program.title}/${program.type==='study'?1:2}`} className="flex items-center text-blue-600 hover:text-blue-800">   
+                En savoir plus ... </Link></span>
               <ChevronRight className="w-4 h-4 ml-1" />
             </div>
           </div>
@@ -220,240 +267,10 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
             <ProgramCard key={program.id} program={program} />
           ))}
         </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Besoin d'aide pour choisir ?
-            </h2>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Notre équipe d'experts est là pour vous accompagner dans le choix du programme 
-              qui correspond le mieux à vos objectifs académiques et professionnels.
-            </p>
-            <button className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-green-700 transition-all transform hover:scale-105 shadow-lg">
-              Contacter un conseiller
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
-// Composant Page de Détail
-const ProgramDetailPage = ({ program, onBack }) => {
-  if (!program) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Programme non trouvé</h2>
-          <button 
-            onClick={onBack}
-            className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-green-700 transition-all"
-          >
-            Retour aux programmes
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header avec gradient */}
-      <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-8">
-          <button 
-            onClick={onBack}
-            className="flex items-center text-white/80 hover:text-white mb-6 transition-colors group"
-          >
-            <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-            Retour aux programmes
-          </button>
-          
-          <div className="flex items-center space-x-6">
-            <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-              <program.icon className="w-10 h-10 text-white" />
-            </div>
-            <div className="flex-1">
-              <div className="flex items-center space-x-3 mb-2">
-                <h1 className="text-4xl font-bold">{program.title}</h1>
-                <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                  program.type === 'study' 
-                    ? 'bg-blue-500/20 text-blue-100' 
-                    : 'bg-green-500/20 text-green-100'
-                }`}>
-                  {program.type === 'study' ? 'Programme d\'études' : 'Programme de bourse'}
-                </span>
-              </div>
-              <p className="text-blue-100 text-xl leading-relaxed">{program.description}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Contenu principal */}
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Contenu principal */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Critères d'éligibilité */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">Critères d'éligibilité</h2>
-              </div>
-              
-              <div className="space-y-4">
-                {program.eligibility.map((criterion, index) => (
-                  <div key={index} className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
-                    <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle className="w-4 h-4 text-white" />
-                    </div>
-                    <p className="text-gray-700 font-medium">{criterion}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Couverture et avantages */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Award className="w-6 h-6 text-blue-600" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">Couverture & Avantages</h2>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-6 border border-blue-100">
-                <p className="text-gray-800 text-lg leading-relaxed">{program.coverage}</p>
-              </div>
-            </div>
-
-            {/* Calendrier */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <Calendar className="w-6 h-6 text-purple-600" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">Calendrier Important</h2>
-              </div>
-              
-              <div className="space-y-4">
-                {program.dates.map((date, index) => (
-                  <div key={index} className="flex items-center space-x-4 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-100">
-                    <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">{index + 1}</span>
-                    </div>
-                    <p className="text-gray-800 font-medium">{date}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Action principale */}
-            <div className="bg-gradient-to-br from-blue-600 to-green-600 rounded-2xl p-6 text-white">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <ExternalLink className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Prêt à candidater ?</h3>
-                <p className="text-blue-100 mb-6 leading-relaxed">
-                  Commencez votre candidature dès maintenant et rejoignez notre communauté d'étudiants d'excellence.
-                </p>
-                <button className="w-full bg-white text-blue-600 py-3 px-6 rounded-xl font-semibold hover:bg-gray-50 transition-all transform hover:scale-105 shadow-lg">
-                  Commencer ma candidature
-                </button>
-              </div>
-            </div>
-
-            {/* Informations de contact */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Besoin d'aide ?</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                  <Mail className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-700 font-medium">programmes@academi.cm</span>
-                </div>
-                <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                  <Phone className="w-5 h-5 text-green-600" />
-                  <span className="text-gray-700 font-medium">+237 6XX XXX XXX</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Statistiques */}
-            <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Statistiques</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Candidats acceptés</span>
-                  <span className="font-bold text-green-600">89%</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Satisfaction</span>
-                  <span className="font-bold text-blue-600">4.8/5</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Anciens étudiants</span>
-                  <span className="font-bold text-purple-600">2,500+</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Section témoignages */}
-        <div className="mt-16">
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Ce que disent nos étudiants
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-blue-50 to-green-50 p-6 rounded-xl border border-blue-100">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 rounded-full flex items-center justify-center">
-                    <Users className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Marie K.</h4>
-                    <p className="text-sm text-gray-600">Étudiante en Master</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 italic">
-                  "Grâce à ce programme, j'ai pu réaliser mon rêve d'étudier à l'international. 
-                  L'accompagnement a été exceptionnel du début à la fin."
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border border-green-100">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Globe className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Jean-Paul M.</h4>
-                    <p className="text-sm text-gray-600">Doctorant</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 italic">
-                  "Une expérience transformatrice ! Le réseau d'anciens étudiants 
-                  m'a ouvert de nombreuses portes professionnelles."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 // Composant Principal de l'Application
 const AcademicProgramsApp = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -467,12 +284,31 @@ const AcademicProgramsApp = () => {
   };
 
   if (selectedProgram) {
+    if (selectedProgram) {
+    // Page de détails UNIQUEMENT
     return (
-      <ProgramDetailPage 
-        program={selectedProgram} 
-        onBack={handleBackToPrograms} 
-      />
+      <div className="min-h-screen flex flex-col bg-white">
+        {/* Facultatif : tu peux garder Header/Footer ou les supprimer ici */}
+        <Header />
+        <main className="flex-1">
+          <ProgramDetailPage 
+            program={selectedProgram} 
+            onBack={handleBackToPrograms} 
+          />
+        </main>
+        <Footer />
+      </div>
     );
+  }
+
+  // Sinon, affiche uniquement la liste
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <Header />
+      <ProgramsNavigator onProgramSelect={handleProgramSelect} />
+      <Footer />
+    </div>
+  );
   }
 
   return (
