@@ -8,12 +8,12 @@ const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/2412179/pexels-photo-2412179.jpeg?auto=compress&cs=tinysrgb&w=800'
+    'images/image1.jpeg',
+    'images/image2.jpeg',
+    'images/image3.jpeg',
+    'images/image4.jpeg',
+    'images/image5.jpeg',
+    'images/image6.jpeg'
   ];
 
   const videos = [
