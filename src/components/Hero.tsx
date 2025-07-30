@@ -25,17 +25,17 @@ const Hero: React.FC = () => {
     },
     {
       // Image desktop
-      imageDesktop: '/slides/slide2-desktop.png', // Future image desktop
+      imageDesktop: 'https://images.pexels.com/photos/33146162/pexels-photo-33146162.jpeg', // Future image desktop
       // Image mobile  
-      imageMobile: '/slides/slide2-mobile.png',   // Future image mobile
+      imageMobile: 'https://images.pexels.com/photos/33146162/pexels-photo-33146162.jpeg',   // Future image mobile
       title: 'Excellence Académique',
       subtitle: 'Rejoignez des milliers d\'étudiants qui ont réalisé leurs rêves'
     },
     {
       // Image desktop
-      imageDesktop: '/slides/slide1-desktop.png', // Future image desktop
+      imageDesktop: 'https://images.pexels.com/photos/33090082/pexels-photo-33090082.jpeg', // Future image desktop
       // Image mobile
-      imageMobile: '/slides/slide1-mobile.png',   // Future image mobile
+      imageMobile: 'https://images.pexels.com/photos/33090082/pexels-photo-33090082.jpeg',   // Future image mobile
       title: 'Votre Avenir International',
       subtitle: 'Des opportunités d\'études dans les meilleures universités mondiales'
     }
