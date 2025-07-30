@@ -194,8 +194,12 @@ const navigate = useNavigate();
 
      
   function getProgramByTitle(title, type,studyPrograms,scholarshipPrograms) {
+    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    console.log(type);
     if(type==1){
-      return studyPrograms.find(program => program.id === title);
+      console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    console.log(type);
+      return studyPrograms.find(program => program.title === title);
     }
   return scholarshipPrograms.find(program => program.title === title);
 }
@@ -219,7 +223,7 @@ const navigate = useNavigate();
     <div className="min-h-screen bg-gray-50">
       {/* Header avec gradient */}
       <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-20">
+        <div className="max-w-4xl mx-auto px-10 py-20">
           <button 
            onClick={() => navigate('/')}
             className="flex items-center text-white/80 hover:text-white mb-6 transition-colors group"
