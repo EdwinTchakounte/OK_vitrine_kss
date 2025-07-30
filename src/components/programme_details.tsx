@@ -1,6 +1,6 @@
 import { ArrowLeft, Award, BookOpen, Brain, Calendar, CheckCircle, ExternalLink, Globe, GraduationCap, Target, Users } from "lucide-react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 // const onBack(){
 //   return (console.log("ok"));
 // }
@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 
 export const ProgramDetailPage = ({  }) => {
 const { title, type } = useParams();
-
+const navigate = useNavigate();
   // Données des programmes d'études
 
   const studyPrograms = [
@@ -72,7 +72,7 @@ const { title, type } = useParams();
       id: 'Langue Chinoise',
       title: 'Langue Chinoise',
       icon: Target,
-      summary: 'Recherche doctorale avec encadrement de qualité internationale',
+      summary: 'Langue Chinoise avec encadrement de qualité internationale',
       description: 'Menez vos recherches doctorales dans un environnement d\'excellence',
       eligibility: ['Master ou équivalent', 'Projet de recherche approuvé', 'Directeur de thèse identifié'],
       coverage: 'Financement recherche, laboratoires, publications',
@@ -84,7 +84,7 @@ const { title, type } = useParams();
       id: 'Stage Academique',
       title: 'Stage Academique',
       icon: Target,
-      summary: 'Recherche doctorale avec encadrement de qualité internationale',
+      summary: 'Stage Academique avec encadrement de qualité internationale',
       description: 'Menez vos recherches doctorales dans un environnement d\'excellence',
       eligibility: ['Master ou équivalent', 'Projet de recherche approuvé', 'Directeur de thèse identifié'],
       coverage: 'Financement recherche, laboratoires, publications',
@@ -219,13 +219,13 @@ const { title, type } = useParams();
     <div className="min-h-screen bg-gray-50">
       {/* Header avec gradient */}
       <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-8">
+        <div className="max-w-4xl mx-auto px-6 py-20">
           <button 
-            //onClick={onBack}
+           onClick={() => navigate('/')}
             className="flex items-center text-white/80 hover:text-white mb-6 transition-colors group"
           >
             <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-            Retour aux programmes hhhh
+            Retour aux programmes 
           </button>
           
           <div className="flex items-center space-x-6">

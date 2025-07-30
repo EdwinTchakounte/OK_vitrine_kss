@@ -70,7 +70,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
       id: 'Langue Chinoise',
       title: 'Langue Chinoise',
       icon: Target,
-      summary: 'Recherche doctorale avec encadrement de qualité internationale',
+      summary: 'Langue Chinoise avec encadrement de qualité internationale',
       description: 'Menez vos recherches doctorales dans un environnement d\'excellence',
       eligibility: ['Master ou équivalent', 'Projet de recherche approuvé', 'Directeur de thèse identifié'],
       coverage: 'Financement recherche, laboratoires, publications',
@@ -82,7 +82,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
       id: 'Stage Academique',
       title: 'Stage Academique',
       icon: Target,
-      summary: 'Recherche doctorale avec encadrement de qualité internationale',
+      summary: 'Stage Academique avec encadrement de qualité internationale',
       description: 'Menez vos recherches doctorales dans un environnement d\'excellence',
       eligibility: ['Master ou équivalent', 'Projet de recherche approuvé', 'Directeur de thèse identifié'],
       coverage: 'Financement recherche, laboratoires, publications',
@@ -119,7 +119,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
     },
     {
       id: 'erasmus',
-      title: 'Erasmus+ Afrique',
+      title: 'Bourses Universitaire du recrutement independant',
       icon: Users,
       summary: 'Mobilité académique en Europe avec financement UE',
       description: 'Opportunités d\'échanges et de formations en Europe via Erasmus+',
@@ -130,7 +130,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
     },
     {
       id: 'commonwealth',
-      title: 'Commonwealth Scholarship',
+      title: 'Bourses Universitaire du recrutement dependant',
       icon: GraduationCap,
       summary: 'Bourses prestigieuses pour études au Royaume-Uni',
       description: 'Programme d\'excellence pour études supérieures dans les universités britanniques',
@@ -141,7 +141,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
     },
     {
       id: 'chevening',
-      title: 'Chevening Scholarship',
+      title: 'Bourses d\'etudes provinciale',
       icon: Brain,
       summary: 'Bourses du gouvernement britannique pour futurs leaders',
       description: 'Programme prestigieux pour études de master au Royaume-Uni',
@@ -152,7 +152,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
     },
     {
       id: 'daad',
-      title: 'DAAD Germany',
+      title: 'Bourse d\'études universitaire',
       icon: Globe,
       summary: 'Bourses allemandes pour études et recherche',
       description: 'Programme du service allemand d\'échanges académiques',
@@ -163,7 +163,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
     },
     {
       id: 'fulbright',
-      title: 'Fulbright Program',
+      title: 'International scholarships Chinese teacher',
       icon: Target,
       summary: 'Échanges éducatifs avec les États-Unis',
       description: 'Programme d\'échanges académiques et culturels USA-Afrique',
@@ -174,7 +174,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
     },
     {
       id: 'australia-awards',
-      title: 'Australia Awards',
+      title: 'Cities sister Scholarships',
       icon: Users,
       summary: 'Bourses australiennes pour le développement',
       description: 'Programme de bourses pour études en Australie',
