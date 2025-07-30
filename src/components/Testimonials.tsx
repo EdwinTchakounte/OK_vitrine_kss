@@ -134,7 +134,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Statistics */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
             <p className="text-gray-600">Étudiants accompagnés</p>
@@ -147,7 +147,7 @@ const Testimonials: React.FC = () => {
             <div className="text-4xl font-bold text-red-500 mb-2">50+</div>
             <p className="text-gray-600">Universités partenaires</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

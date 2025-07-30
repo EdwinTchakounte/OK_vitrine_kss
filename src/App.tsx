@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import AcademicProgramsNavigator from './components/academic-programs-navigator';
 import AcademicProgramsApp from './components/academic-programs-navigator';
+import EducationResults from './components/Result';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Steps />
         <Gallery />
         <Testimonials />
+        <EducationResults />
         <Partners />
         <FAQ />
         <Contact />
