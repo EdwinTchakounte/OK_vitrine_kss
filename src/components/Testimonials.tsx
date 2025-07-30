@@ -11,7 +11,7 @@ const Testimonials: React.FC = () => {
       name: 'Mary-wonk ',
       country: ' (+86 138 9366 6534)',
       university: 'Commerce International - Liaoning University ',
-      message: 'Grâce à Khrist\'stephen Saba, j\'ai obtenu une bourse complète pour étudier en Chine. L\'accompagnement a été exceptionnel du début à la fin.',
+      message: 'Grâce à vous, je suis aujourd’hui en Chine. Rien n’a été facile, mais avec persévérance et accompagnement, j’ai atteint mon objectif',
       image: 'images/Bonhomme.png',
       rating: 5
     },
@@ -19,7 +19,7 @@ const Testimonials: React.FC = () => {
       name: 'Moumbe Noche Alex',
       country: '(+86 166 0582 7697)',
       university: 'Computer sciences-Huzhou University',
-      message: 'Le processus était complexe, mais l\'équipe m\'a guidé à chaque étape. Je recommande vivement leurs services.',
+      message: 'Vous m\'avez aidé à croire en cette opportunité. Aujourd’hui, je poursuis mes études à Huzhou. Merci infiniment pour votre soutien.',
       image: 'images/Bonhomme.png',
       rating: 5
     },
@@ -27,7 +27,7 @@ const Testimonials: React.FC = () => {
       name: 'Kissogole Franck Perez',
       country: '(+86 155 8024 7692)',
       university: 'Mechanical ,design,manufacture and automation',
-      message: 'Mon rêve d\'étudier en Allemagne s\'est réalisé grâce à leur expertise. Un service professionnel et efficace.',
+      message: 'Mon rêve d\'étudier en Chine s\'est réalisé grâce à leur expertise. Un service professionnel et efficace.',
       image: 'images/Bonhomme.png',
       rating: 5
     },
@@ -35,7 +35,7 @@ const Testimonials: React.FC = () => {
       name: 'Yossa Soh Bleriot',
       country: '(+86 150 4262 7741)',
       university: 'Jinzhou University',
-      message: 'L\'équipe a été d\'une aide précieuse pour préparer mon dossier. Je suis maintenant étudiant au Canada.',
+      message: 'Tout semblait impossible au départ. Mais grâce à votre programme et vos conseils, je suis maintenant étudiant en Chine',
       image: 'images/Bonhomme.png',
       rating: 5
     }
