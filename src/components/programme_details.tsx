@@ -333,82 +333,13 @@ const navigate = useNavigate();
               </div>
             </div>
 
-            {/* Informations de contact */}
-            {/* <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Besoin d'aide ?</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                  <Mail className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-700 font-medium">programmes@academi.cm</span>
-                </div>
-                <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                  <Phone className="w-5 h-5 text-green-600" />
-                  <span className="text-gray-700 font-medium">+237 6XX XXX XXX</span>
-                </div>
-              </div> */}
+           
             </div>
-
-            {/* Statistiques */}
-            {/* <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Statistiques</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Candidats acceptés</span>
-                  <span className="font-bold text-green-600">89%</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Satisfaction</span>
-                  <span className="font-bold text-blue-600">4.8/5</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Anciens étudiants</span>
-                  <span className="font-bold text-purple-600">2,500+</span>
-                </div>
-              </div>
-            </div> */}
+           
           </div>
         </div>
 
-        {/* Section témoignages */}
-        {/* <div className="mt-16">
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Ce que disent nos étudiants
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-blue-50 to-green-50 p-6 rounded-xl border border-blue-100">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 rounded-full flex items-center justify-center">
-                    <Users className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Marie K.</h4>
-                    <p className="text-sm text-gray-600">Étudiante en Master</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 italic">
-                  "Grâce à ce programme, j'ai pu réaliser mon rêve d'étudier à l'international. 
-                  L'accompagnement a été exceptionnel du début à la fin."
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border border-green-100">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Globe className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Jean-Paul M.</h4>
-                    <p className="text-sm text-gray-600">Doctorant</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 italic">
-                  "Une expérience transformatrice ! Le réseau d'anciens étudiants 
-                  m'a ouvert de nombreuses portes professionnelles."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
+       
       </div>
    
   );
