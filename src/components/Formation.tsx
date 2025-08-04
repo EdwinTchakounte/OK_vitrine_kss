@@ -115,7 +115,7 @@ const FormationPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50" id='formation'>
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white">
         <div className="max-w-7xl mx-auto px-6 py-16">
@@ -127,7 +127,7 @@ const FormationPage = () => {
               </h1>
               <p className="text-xl mb-8 opacity-90">
                 Développez vos compétences technologiques avec Edwin Tchakounte et plusieurs autres experts, 
-                 expert reconnu dans le développement d'applications innovantes.
+                 expert reconnu dans les nouvelles technologies et plusieurs autres secteurs porteurs.
               </p>
               <div className="flex flex-wrap gap-4">
                 {/* <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors flex items-center gap-2">

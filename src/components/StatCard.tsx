@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Users, GraduationCap, Heart, FileCheck, Calendar, MapPin, Clock, TrendingUp, Sparkles } from 'lucide-react';
 
-const StatCard = ({ icon: Icon, title, value, color, bgColor, delay = 0 }) => {
+const StatCard = ({ icon: Icon, title, value, color, bgColor, delay = 0,subtitle }) => {
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
@@ -36,6 +36,11 @@ const StatCard = ({ icon: Icon, title, value, color, bgColor, delay = 0 }) => {
             }}
           ></div>
         </div>
+        {subtitle && (
+          <p className="text-sm text-gray-500 mt-2">
+            {subtitle}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -82,10 +87,11 @@ export default function StatsDashboard() {
     },
     {
       icon: FileCheck,
-      title: "Parents engagés",
+      title: "Souscriptions au programme",
       value: "53",
       color: "bg-green-500",
-      bgColor: "bg-green-50/30"
+      bgColor: "bg-green-50/30",
+      subtitle: "departement GMP-IUT , CGE-FSEGA"
     },
     {
       icon: Calendar,
@@ -162,6 +168,7 @@ export default function StatsDashboard() {
               <StatCard
                 key={index}
                 icon={stat.icon}
+                subtitle={stat.subtitle ? stat.subtitle : ""}
                 title={stat.title}
                 value={stat.value}
                 color={stat.color}
