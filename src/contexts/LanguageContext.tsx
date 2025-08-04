@@ -25,7 +25,8 @@ const translations: Record<string, Translation> = {
       testimonials: 'Témoignages',
       partners: 'Partenaires',
       faq: 'FAQ',
-      contact: 'Contact'
+      contact: 'Contact',
+      formations: 'Formations'
     },
     hero: {
       title: 'Construis ton avenir à l\'international',
@@ -99,7 +100,8 @@ const translations: Record<string, Translation> = {
       testimonials: 'Testimonials',
       partners: 'Partners',
       faq: 'FAQ',
-      contact: 'Contact'
+      contact: 'Contact',
+      formations: 'Formations'
     },
     hero: {
       title: 'Build your international future',

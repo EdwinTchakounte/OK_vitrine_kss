@@ -16,6 +16,7 @@ export interface Translation {
     partners: string;
     faq: string;
     contact: string;
+    formations: string;
   };
   // Hero Section
   hero: {

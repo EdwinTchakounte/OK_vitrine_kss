@@ -16,6 +16,7 @@ import AcademicProgramsNavigator from './academic-programs-navigator';
 import AcademicProgramsApp from './academic-programs-navigator';
 import EducationResults from './Result';
 import StatCard from './StatCard';
+import FormationPage from './Formation';
 
 const Home: React.FC = () => {
 
@@ -32,11 +33,11 @@ const Home: React.FC = () => {
         {/* <Gallery /> */}
         <Testimonials />
          <StatCard/>
-        <EducationResults />
+        {/* <EducationResults /> */}
         <Partners />
         <FAQ />
         <Contact />
-        <Footer />
+         <FormationPage/>
         <WhatsAppButton />
       </div>
     </LanguageProvider>
