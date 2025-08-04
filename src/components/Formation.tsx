@@ -117,12 +117,12 @@ const FormationPage = () => {
   return (
     <div className="min-h-screen bg-gray-50" id='formation'>
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="p-[2px] rounded-2xl bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-600 via-blue-700 to-green-600 m-4 ">
+        <div className="max-w-7xl mx-auto px-6 py-16 ">
+          <div className="grid lg:grid-cols-2 gap-12 text-white items-center">
             <div>
               <h1 className="text-5xl font-bold mb-6 leading-tight">
-                Dans sa course vers l'excellence, <span className="text-yellow-300">KIES</span> vous offre des formations d'exception
+                 <span className="text-yellow-300">KIES</span> Vers L'excellence
                 
               </h1>
               <p className="text-xl mb-8 opacity-90">
