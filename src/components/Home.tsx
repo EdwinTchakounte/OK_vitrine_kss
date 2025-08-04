@@ -15,6 +15,7 @@ import WhatsAppButton from './WhatsAppButton';
 import AcademicProgramsNavigator from './academic-programs-navigator';
 import AcademicProgramsApp from './academic-programs-navigator';
 import EducationResults from './Result';
+import StatCard from './StatCard';
 
 const Home: React.FC = () => {
 
@@ -28,8 +29,9 @@ const Home: React.FC = () => {
         <About />
         <AcademicProgramsApp />
         <Steps />
-        <Gallery />
+        {/* <Gallery /> */}
         <Testimonials />
+         <StatCard/>
         <EducationResults />
         <Partners />
         <FAQ />
