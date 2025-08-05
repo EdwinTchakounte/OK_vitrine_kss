@@ -86,7 +86,7 @@ const Partners: React.FC = () => {
             Collaborations Stratégiques
           </h3>
           <p className="text-lg md:text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Nos Collaborations avec des universités de renommée mondiale nous permettent d'offrir 
+            Nos Collaborations avec des universités du top 200 de renommée mondiale et nationale ,des entreprises ,des lycées et collèges nous permettent d'offrir 
             des opportunités d'études exceptionnelles à nos étudiants.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">

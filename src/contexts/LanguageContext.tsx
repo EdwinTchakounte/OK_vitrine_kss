@@ -68,7 +68,7 @@ const translations: Record<string, Translation> = {
       title: 'Témoignages'
     },
     partners: {
-      title: 'Nos Partenaires'
+      title: 'Nos Collaborateurs et Partenaires'
     },
     faq: {
       title: 'Questions Fréquentes'
@@ -143,7 +143,7 @@ const translations: Record<string, Translation> = {
       title: 'Testimonials'
     },
     partners: {
-      title: 'Our Partners'
+      title: 'Our collaborators and Partners'
     },
     faq: {
       title: 'Frequently Asked Questions'
