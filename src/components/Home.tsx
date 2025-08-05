@@ -35,8 +35,9 @@ const Home: React.FC = () => {
          <StatCard/>
         {/* <EducationResults /> */}
         <Partners />
-        <FAQ />
         <FormationPage/>
+        <FAQ />
+        
         <Contact />
          
         <WhatsAppButton />
