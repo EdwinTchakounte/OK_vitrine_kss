@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     { name: translations.nav.testimonials, href: '#testimonials' },
     { name: translations.nav.partners, href: '#partners' },
     { name: translations.nav.faq, href: '#faq' },
-    { name: translations.nav.formations, href: '#formation' },
+    { name: translations.nav.formations, href: '#bonus-ksies' },
     { name: translations.nav.contact, href: '#contact' }
   ];
 
