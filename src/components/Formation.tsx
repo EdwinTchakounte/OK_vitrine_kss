@@ -68,7 +68,7 @@ const FormationPage: React.FC = () => {
       <div className="p-[2px] rounded-2xl bg-gradient-to-br from-blue-600 to-green-600 m-4">
         <div className="max-w-6xl mx-auto px-6 py-16 text-white">
           <h1 className="text-5xl font-bold mb-6">
-            Bonus de formation intégrée en technologie  pour<span className="text-yellow-300">étudiant KSIES</span>
+            Bonus de formation intégrée en technologie  pour <span className="text-yellow-300">étudiant KSIES</span>
           </h1>
           <p className="text-xl mb-4 opacity-90">
             Dans le but de mieux préparer nos étudiants, nous sommes ravis de vous annoncer qu’en tant qu’étudiant KSIES, vous bénéficiez d’un programme bonus pour développer vos compétences technologiques.
