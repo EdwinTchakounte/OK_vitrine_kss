@@ -158,7 +158,7 @@ const FormationPage: React.FC = () => {
         <h3 className="text-3xl font-bold mb-4">Exclusif aux étudiants KSIES</h3>
         <p className="text-xl mb-6">Cliquez ci‑dessous pour accéder à votre bonus et commencer votre formation.</p>
         <a
-          href="mailto:contact@ksies.com"
+          href="mailto:contact@ksies-scholarships.net"
           className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-100 transition-colors gap-2"
         >
           <MessageCircle className="w-5 h-5" /> Contacter le support
