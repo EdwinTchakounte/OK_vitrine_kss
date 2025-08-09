@@ -451,13 +451,6 @@ const datasheet = [
             <div className="flex-1">
               <div className="flex items-center space-x-3 mb-2">
                 <h1 className="text-4xl font-bold">{program.title}</h1>
-                <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                  program.type === 'study' 
-                    ? 'bg-blue-500/20 text-blue-100' 
-                    : 'bg-green-500/20 text-green-100'
-                }`}>
-                  {program.type === 'study' ? 'Programme d\'études' : 'Programme de bourse'}
-                </span>
               </div>
               
               
