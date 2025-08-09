@@ -315,7 +315,7 @@ const datasheet = [
       title: 'Bourse du Gouvernement Chinois (CSC)',
       icon: Globe,
       summary: 'Bourse du gouvernement chinois pour études en Chine',
-      description: "Afin de promouvoir la compréhension mutuelle, la coopération et les échanges dans les domaines de la politique, de l’économie, de la culture, de l’éducation et du commerce entre la Chine et d’autres pays, le gouvernement chinois parraine des étudiants, enseignants et universitaires internationaux pour étudier et mener des recherches dans des universités chinoises. Le China Scholarship Council (CSC), mandaté par le Ministère de l’Éducation, administre ces programmes.",
+      description: 'Programme prestigieux du China Scholarship Council pour excellents étudiants africains',
       eligibility: ['Nationalité non-chinoise', 'Excellence académique', 'Bonne santé', 'Âge : 18-35 ans'],
       coverage: 'Frais de scolarité, hébergement, allocation mensuelle, assurance médicale',
       dates: ['Candidatures : 15 janvier - 15 mai 2025', 'Rentrée : septembre 2025'],
@@ -445,9 +445,7 @@ const datasheet = [
           </button>
           
           <div className="flex items-center space-x-6">
-            <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-              <program.icon className="w-10 h-10 text-white" />
-            </div>
+            
             <div className="flex-1">
               <div className="flex items-center space-x-3 mb-2">
                 <h1 className="text-4xl font-bold">{program.title}</h1>
@@ -459,10 +457,9 @@ const datasheet = [
                   {program.type === 'study' ? 'Programme d\'études' : 'Programme de bourse'}
                 </span>
               </div>
-              
+              <p className="text-blue-100 text-xl leading-relaxed">{program.description}</p>
               
             </div>
-            <p className="text-blue-100 text-xl leading-relaxed">{program.description}</p>
           </div>
         </div>
       
