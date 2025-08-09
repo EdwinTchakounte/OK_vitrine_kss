@@ -13,6 +13,7 @@ export const ScholarshipDisplay = ({ scholarshipData }) => {
 
   const Section = ({ title, children, icon: Icon, sectionKey, defaultExpanded = false }) => {
     const isExpanded = expandedSections[sectionKey] ?? defaultExpanded;
+      
     
     return (
       <div className="border border-gray-200 rounded-lg mb-4 overflow-hidden shadow-sm">

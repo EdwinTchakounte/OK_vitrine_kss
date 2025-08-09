@@ -431,6 +431,18 @@ const datasheet = [
     );
   }
 
+  function ScholarshipPreview(programId) {
+  const scholarship = getProgramById(programId);
+  console.log("ScholarshipPreview called with programId:", programId);
+
+  if (!scholarship) {
+    return <p>Aucune donnée disponible</p>;
+  }
+
+  return <ScholarshipDisplay scholarshipData={scholarship} />;
+}
+
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header avec gradient */}
@@ -445,7 +457,7 @@ const datasheet = [
           </button>
           
           <div className="flex items-center space-x-6">
-            
+
             <div className="flex-1">
               <div className="flex items-center space-x-3 mb-2">
                 <h1 className="text-4xl font-bold">{program.title}</h1>
@@ -464,7 +476,8 @@ const datasheet = [
         </div>
       
       </div>
-      <ScholarshipDisplay scholarshipData={getProgramById(program.id)} />
+      {ScholarshipPreview(program.id)}
+      {/* <ScholarshipDisplay scholarshipData={getProgramById(program.id)} /> */}
       </div>
 
       
