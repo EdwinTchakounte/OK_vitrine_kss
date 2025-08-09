@@ -449,7 +449,7 @@ const datasheet = [
               <program.icon className="w-10 h-10 text-white" />
             </div>
             <div className="flex-1">
-              <div className="flex items-center  mb-2">
+              <div className="flex items-center space-x-3 mb-2">
                 <h1 className="text-4xl font-bold">{program.title}</h1>
                 <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                   program.type === 'study' 
