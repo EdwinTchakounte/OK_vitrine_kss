@@ -1,6 +1,7 @@
 import { ArrowLeft, Award, BookOpen, Brain, Calendar, CheckCircle, ExternalLink, Globe, GraduationCap, Target, Users } from "lucide-react";
 import { useState } from "react";
 import { useParams,useNavigate } from "react-router-dom";
+import { ScholarshipDisplay } from "./scholarship";
 // const onBack(){
 //   return (console.log("ok"));
 // }
@@ -10,6 +11,215 @@ import { useParams,useNavigate } from "react-router-dom";
 export const ProgramDetailPage = ({  }) => {
 const { title, type } = useParams();
 const navigate = useNavigate();
+
+const datasheet = [
+  {
+    id: "fulbright",
+    title: "Bourse internationale pour les enseignants de langue chinoise",
+    description: "Afin de répondre à la demande internationale croissante d'enseignants de langue chinoise, de faciliter l'enseignement de la langue chinoise dans le monde entier et de soutenir le développement professionnel des enseignants de langue chinoise, le Centre pour l'enseignement des langues et la coopération (CLEC) a créé cette bourse pour les enseignants de langue chinoise éligibles en dehors de la Chine.",
+    eligibility: [
+      "Être un citoyen non chinois",
+      "Être amical avec la Chine, n'avoir aucun casier judiciaire, respecter les lois et règlements de la Chine et les règles de l'Université",
+      "Être en bonne santé physique et mentale, avoir de bons résultats scolaires et comportementaux",
+      "S'intéresser à l'enseignement de la langue chinoise et au travail connexe",
+      "Être âgé de 18 à 35 ans (au 1er septembre 2025). La limite d'âge maximale pour les enseignants de chinois en poste peut être portée à 45 ans"
+    ],
+    scholarshipTypes: [
+      {
+        type: "Bourse d'études pour une maîtrise en enseignement international de la langue chinoise",
+        duration: "Commence en septembre, accordée pour un maximum de deux années académiques",
+        requirements: "Baccalauréat, HSK niveau 5 (score minimum 210), HSKK niveau intermédiaire (score minimum 60)",
+        priority: "Priorité donnée aux candidats pouvant fournir un contrat de travail avec un établissement d'enseignement à l'issue de leurs études"
+      },
+      {
+        type: "Bourse pour un programme d'études d'un an (langue et littérature chinoises)",
+        duration: "Commence en septembre, fournie pour un maximum de onze mois",
+        requirements: "HSK niveau 4 (score minimum 180), HSKK niveau intermédiaire (score minimum 60)",
+        priority: "Les candidats ayant reçu une bourse similaire dans les trois ans ne sont pas éligibles"
+      },
+      {
+        type: "Bourse pour un programme d'études d'un semestre (langue et littérature chinoises)",
+        duration: "Commence en septembre ou mars 2026, fournie pour un maximum de cinq mois",
+        requirements: "HSK niveau 3 (score minimum 180), score HSKK requis",
+        priority: "Les candidats ayant reçu une bourse similaire dans les trois ans ne sont pas éligibles"
+      }
+    ],
+    coverage: {
+      description: "La bourse offre une couverture complète des frais de scolarité, des frais d'hébergement, de l'allocation de subsistance et des frais d'assurance médicale complets.",
+      contactLink: "#"
+    },
+    applicationDates: {
+      openingMessage: "L'inscription est ouverte à partir d'aujourd'hui.",
+      deadlines: [
+        "15 mai (pour les programmes commençant en septembre 2025)",
+        "31 octobre (pour le programme d'études d'un semestre commençant en mars 2026 seulement)"
+      ]
+    },
+    applicationProcedure: {
+      description: "Pour postuler, veuillez nous contacter via le lien fourni.",
+      contactLink: "#"
+    },
+    documents: {
+      general: [
+        "Une copie scannée de la page photo du passeport (le passeport doit être valide avant le 1er mars 2026)",
+        "Une copie scannée des attestations de score des tests HSK et HSKK (pendant la validité de deux ans)",
+        "Une lettre de recommandation du chef des institutions de recommandation"
+      ],
+      masters: [
+        "Certificats du diplôme le plus élevé",
+        "Relevés de notes académiques pendant les études de baccalauréat",
+        "Déclaration personnelle, en chinois, incluant l'expérience d'étude et de travail, les raisons de la candidature et la proposition d'étude (minimum 1500 mots)",
+        "Deux lettres de recommandation de professeurs titulaires ou agrégés, en chinois ou anglais",
+        "Articles académiques publiés ou autres réalisations académiques (le cas échéant)",
+        "Formulaire d'acceptation provisoire d'un étudiant international (le cas échéant)",
+        "Contrat de travail notarié avec les établissements d'enseignement (le cas échéant)",
+        "Photocopie du formulaire d'examen physique des étrangers",
+        "Certificat de non-casier judiciaire, valable 6 mois",
+        "Engagements pour la demande de master de l'Université (version PDF complètement remplie et signée à la main)"
+      ]
+    },
+    specialPolicies: {
+      inServiceTeachers: {
+        title: "Enseignants de chinois en poste",
+        description: "Les enseignants de chinois en poste doivent fournir une preuve d'emploi et une lettre de recommandation de l'employeur."
+      },
+      bridgeWinners: {
+        title: "Vainqueurs du Chinese Bridge",
+        description: "Les candidats ayant reçu le certificat de bourse internationale lors des compétitions Chinese Bridge doivent soumettre leurs documents avec leurs certificats de bourse."
+      }
+    },
+    additionalInfo: [
+      "Les étudiants sont soumis à l'évaluation annuelle conformément aux procédures d'évaluation de la bourse",
+      "Les étudiants qui ne réussissent pas l'examen médical, se retirent avant la fin du programme, ou suspendent leurs études seront disqualifiés",
+      "Les candidats admis au programme de maîtrise doivent fournir les copies originales des certificats de diplôme"
+    ],
+    contact: "Pour l'inscription et d'autres questions, veuillez utiliser les liens de contact fournis."
+  },
+
+  /***** NOUVELLE ENTREE : BOURSE DU GOUVERNEMENT CHINOIS (CSC) *****/
+  {
+    id: "csc",
+    title: "Bourse du Gouvernement Chinois (CSC)",
+    description: "Afin de promouvoir la compréhension mutuelle, la coopération et les échanges dans les domaines de la politique, de l’économie, de la culture, de l’éducation et du commerce entre la Chine et d’autres pays, le gouvernement chinois parraine des étudiants, enseignants et universitaires internationaux pour étudier et mener des recherches dans des universités chinoises. Le China Scholarship Council (CSC), mandaté par le Ministère de l’Éducation, administre ces programmes.",
+    eligibility: [
+      "Citoyen non chinois (sauf cas particuliers précisés par le programme)",
+      "Bonne santé physique et mentale (examen médical exigé pour séjours > 6 mois)",
+      "Conformité aux exigences académiques et linguistiques propres à chaque programme",
+      "Respect des lois et règlements de la Chine et des règles de l'université d'accueil"
+    ],
+    scholarshipTypes: [
+      {
+        type: "Programme de premier cycle (undergraduate)",
+        duration: "3 à 5 ans selon la spécialité",
+        requirements: "Diplôme de fin d'études secondaires, documents académiques et parfois HSK selon l'université",
+        note: "Les cursus de premier cycle enseignés en chinois nécessitent souvent une année préparatoire de langue"
+      },
+      {
+        type: "Programme de master",
+        duration: "2 à 3 ans",
+        requirements: "Licence, relevés de notes, plan d'étude/projet de recherche, lettres de recommandation"
+      },
+      {
+        type: "Programme de doctorat",
+        duration: "3 à 4 ans (variable)",
+        requirements: "Master ou équivalent, proposition de recherche détaillée, lettres de recommandation"
+      },
+      {
+        type: "Programme d'échanges/scholars (chercheurs invités)",
+        duration: "Quelques mois à 1 an (selon dossier)",
+        requirements: "CV académique, projet de recherche, lettre d'invitation d'une université chinoise (si possible)"
+      },
+      {
+        type: "Programme préparatoire de langue (classe préparatoire)",
+        duration: "1 à 2 ans",
+        requirements: "Destiné aux candidats devant suivre des cours de chinois avant d'entamer les études principales"
+      },
+      {
+        type: "Programmes spécialisés (arts, musique, etc.)",
+        duration: "Variable (annuel ou pluriannuel)",
+        requirements: "Dépôt d'œuvres (CD, portfolio), exigences spécifiques selon la discipline"
+      },
+      {
+        type: "Other CSC sub-programs",
+        duration: "Variable",
+        requirements: "Varient selon le sous-programme et l'université d'accueil"
+      }
+    ],
+    coverage: {
+      description: "La bourse standard CSC peut couvrir un ou plusieurs éléments : frais de scolarité, hébergement (dortoir universitaire ou subvention logement), allocation mensuelle, et assurance médicale. Le niveau de couverture dépend du type (complète/partielle) et de la catégorie d'études.",
+      details: {
+        fullScholarship: {
+          tuition: "Exonération totale des frais de scolarité",
+          accommodation: "Dortoir universitaire gratuit OU subvention pour logement hors campus",
+          monthlyStipend: {
+            undergraduate: "2 500 CNY / mois",
+            master: "3 000 CNY / mois",
+            phd_research: "3 500 CNY / mois"
+          },
+          medicalInsurance: "Assurance médicale complète selon la politique 'Comprehensive Insurance & Protection Scheme for Foreigners Staying in China'"
+        },
+        partialScholarship: "Peut couvrir seulement une partie des éléments ci-dessus (ex. frais de scolarité uniquement)"
+      }
+    },
+    applicationDates: {
+      openingMessage: "Les candidatures se font généralement une fois par an.",
+      periods: [
+        "Période d'application générale : janvier à avril chaque année",
+        "Certaines universités peuvent avoir des fenêtres spécifiques — vérifier le calendrier de l'université d'accueil"
+      ]
+    },
+    applicationProcedure: {
+      description: "Candidature en ligne via le portail CSC et/ou via l'université d'accueil. Le numéro d'agence (agency number) de la structure locale peut être requis pour l'inscription en ligne. Les candidats doivent rassembler les documents exigés et les soumettre dans l'ordre requis.",
+      notes: [
+        "Vérifier si l'université d'accueil exige une lettre de pré-admission ; certaines invitations accélèrent le traitement",
+        "S'assurer d'avoir les traductions notariées pour tout document rédigé dans une langue autre que l'anglais ou le chinois"
+      ],
+      contactLink: "#"
+    },
+    documents: {
+      general: [
+        "Formulaire de demande de la bourse du gouvernement chinois (en chinois ou en anglais)",
+        "Diplôme le plus élevé notarié (photocopie) — ou preuve officielle de statut étudiant pour les diplômés imminents",
+        "Relevés de notes académiques (en chinois ou en anglais; traductions notariées si nécessaire)",
+        "Plan d'étude ou proposition de recherche (minimums recommandés : 200 mots pour undergraduate, 500 mots pour non-degree, 800 mots pour gradué)",
+        "Deux lettres de recommandation (pour master/doctorat : signées par un professeur ou professeur agrégé)",
+        "CD/portfolio d'œuvres (pour les disciplines artistiques/musicales)",
+        "Documents des tuteurs en Chine (pour candidats < 18 ans)",
+        "Formulaire d'examen médical pour étrangers (photocopie) — requis pour séjours > 6 mois",
+        "Copie de la lettre de pré-admission de l'université chinoise (si disponible)",
+        "Certificat HSK (si requis par le programme)"
+      ],
+      packagingInstruction: "Tous les documents doivent être reliés ensemble dans le coin supérieur gauche dans l'ordre indiqué par les instructions officielles (habituellement 1 → 10)."
+    },
+    duration: {
+      description: "La durée varie selon la catégorie (undergraduate, master, doctorat, préparation linguistique, etc.). Voir les tableaux récapitulatifs spécifiques au programme et à l'université d'accueil.",
+      note: "Les cours de langue préparatoires peuvent durer 1 à 2 ans selon la spécialité et exigences linguistiques."
+    },
+    languageOfInstruction: {
+      undergraduate: "Principalement en chinois ; une année préparatoire de langue est souvent requise pour les boursiers entrant dans des programmes enseignés en chinois.",
+      graduate_and_nonDegree: "Peut être enseigné en chinois ou en anglais selon le programme et l'université ; les candidats doivent vérifier la langue d'enseignement choisie."
+    },
+    coverageAndStandard: {
+      note: "La bourse standard couvre : frais de scolarité, hébergement (ou subvention), allocation mensuelle et assurance. Des barèmes et montants différenciés existent selon les domaines d'études (I, II, III) et le niveau académique.",
+      domainGroups: {
+        I: "Économie, gestion, droit, éducation, arts libéraux, histoire, philosophie",
+        II: "Sciences, ingénierie, agriculture",
+        III: "Beaux-Arts, médecine"
+      }
+    },
+    specialPolicies: {
+      preparatoryExemptions: "Les boursiers de premier cycle peuvent demander exemption des cours préparatoires si leurs études secondaires ont été effectuées en chinois ou s'ils possèdent un certificat HSK répondant aux exigences.",
+      languageFailure: "Les boursiers ne maîtrisant pas une langue d'instruction requise peuvent se voir demander de suivre des cours de langue (1 à 2 ans maximum selon la discipline); un échec aux exigences linguistiques peut entraîner la résiliation de la bourse."
+    },
+    additionalInfo: [
+      "Le numéro d'agence (agency number) est requis pour certaines candidatures en ligne — vérifier auprès de l'institution locale en charge",
+      "Les examens médicaux valables seulement 6 mois : planifier en conséquence",
+      "La bourse peut être partielle ou complète — vérifier les détails spécifiques au programme choisi"
+    ],
+    contact: "Pour candidature et informations détaillées, consulter le portail officiel du China Scholarship Council (CSC) ou contacter l'université chinoise d'accueil. (lien/contact à ajouter selon le besoin)"
+  }
+];
+
   // Données des programmes d'études
 
   const studyPrograms = [
@@ -102,10 +312,10 @@ const navigate = useNavigate();
   const scholarshipPrograms = [
     {
       id: 'csc',
-      title: 'CSC Scholarship',
+      title: 'Bourse du Gouvernement Chinois (CSC)',
       icon: Globe,
       summary: 'Bourse du gouvernement chinois pour études en Chine',
-      description: 'Programme prestigieux du China Scholarship Council pour excellents étudiants africains',
+      description: "Afin de promouvoir la compréhension mutuelle, la coopération et les échanges dans les domaines de la politique, de l’économie, de la culture, de l’éducation et du commerce entre la Chine et d’autres pays, le gouvernement chinois parraine des étudiants, enseignants et universitaires internationaux pour étudier et mener des recherches dans des universités chinoises. Le China Scholarship Council (CSC), mandaté par le Ministère de l’Éducation, administre ces programmes.",
       eligibility: ['Nationalité non-chinoise', 'Excellence académique', 'Bonne santé', 'Âge : 18-35 ans'],
       coverage: 'Frais de scolarité, hébergement, allocation mensuelle, assurance médicale',
       dates: ['Candidatures : 15 janvier - 15 mai 2025', 'Rentrée : septembre 2025'],
@@ -168,10 +378,10 @@ const navigate = useNavigate();
     },
     {
       id: 'fulbright',
-      title: 'International scholarships Chinese teacher',
+      title: 'Bourse internationale pour les enseignants de langue chinoise',
       icon: Target,
       summary: 'Échanges éducatifs avec les États-Unis',
-      description: 'Programme d\'échanges académiques et culturels USA-Afrique',
+      description: 'Afin de répondre à la demande internationale croissante d\'enseignants de langue chinoise, de faciliter l\'enseignement de la langue chinoise dans le monde entier et de soutenir le développement professionnel des enseignants de langue chinoise, le Centre pour l\'enseignement des langues et la coopération (CLEC) a créé cette bourse pour les enseignants de langue chinoise éligibles en dehors de la Chine.',
       eligibility: ['Excellence académique', 'Projet d\'études aux USA', 'Leadership communautaire'],
       coverage: 'Frais de scolarité, allocation, voyage, assurance',
       dates: ['Candidatures annuelles', 'Deadline pays-spécifique'],
@@ -192,7 +402,9 @@ const navigate = useNavigate();
 
    const [program,setProgram] = useState(getProgramByTitle(title, type,studyPrograms,scholarshipPrograms));
 
-     
+  function getProgramById(id){
+      return datasheet.find(program => program.id === id);
+  }  
   function getProgramByTitle(title, type,studyPrograms,scholarshipPrograms) {
     console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
     console.log(type);
@@ -248,99 +460,20 @@ const navigate = useNavigate();
                 </span>
               </div>
               <p className="text-blue-100 text-xl leading-relaxed">{program.description}</p>
+              
             </div>
           </div>
         </div>
+      
+      </div>
+      <ScholarshipDisplay scholarshipData={getProgramById(program.id)} />
       </div>
 
-      {/* Contenu principal */}
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Contenu principal */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Critères d'éligibilité */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">Critères d'éligibilité</h2>
-              </div>
-              
-              <div className="space-y-4">
-                {program.eligibility.map((criterion, index) => (
-                  <div key={index} className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
-                    <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle className="w-4 h-4 text-white" />
-                    </div>
-                    <p className="text-gray-700 font-medium">{criterion}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Couverture et avantages */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Award className="w-6 h-6 text-blue-600" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">Couverture & Avantages</h2>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-6 border border-blue-100">
-                <p className="text-gray-800 text-lg leading-relaxed">{program.coverage}</p>
-              </div>
-            </div>
-
-            {/* Calendrier */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <Calendar className="w-6 h-6 text-purple-600" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">Calendrier Important</h2>
-              </div>
-              
-              <div className="space-y-4">
-                {program.dates.map((date, index) => (
-                  <div key={index} className="flex items-center space-x-4 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-100">
-                    <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">{index + 1}</span>
-                    </div>
-                    <p className="text-gray-800 font-medium">{date}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Action principale */}
-            <div className="bg-gradient-to-br from-blue-600 to-green-600 rounded-2xl p-6 text-white">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <ExternalLink className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Prêt à candidater ?</h3>
-                <p className="text-blue-100 mb-6 leading-relaxed">
-                  Commencez votre candidature dès maintenant et rejoignez notre communauté d'étudiants d'excellence.
-                </p>
-                <button className="w-full bg-white text-blue-600 py-3 px-6 rounded-xl font-semibold hover:bg-gray-50 transition-all transform hover:scale-105 shadow-lg">
-                  Commencer ma candidature
-                </button>
-              </div>
-            </div>
-
-           
-            </div>
-           
-          </div>
-        </div>
-
-       
-      </div>
+      
    
   );
 };
+
+
+
+

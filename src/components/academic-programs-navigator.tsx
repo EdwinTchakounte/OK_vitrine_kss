@@ -97,7 +97,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
   const scholarshipPrograms = [
     {
       id: 'csc',
-      title: 'CSC Scholarship',
+      title: 'Bourse du Gouvernement Chinois (CSC)',
       icon: Globe,
       summary: 'Bourse du gouvernement chinois pour études en Chine',
       description: 'Programme prestigieux du China Scholarship Council pour excellents étudiants africains',
@@ -163,7 +163,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
     },
     {
       id: 'fulbright',
-      title: 'International scholarships Chinese teacher',
+      title: 'Bourse internationale pour les enseignants de langue chinoise',
       icon: Target,
       summary: 'Échanges éducatifs avec les États-Unis',
       description: 'Programme d\'échanges académiques et culturels USA-Afrique',
