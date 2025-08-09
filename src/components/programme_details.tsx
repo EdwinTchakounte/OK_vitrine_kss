@@ -459,9 +459,10 @@ const datasheet = [
                   {program.type === 'study' ? 'Programme d\'études' : 'Programme de bourse'}
                 </span>
               </div>
-              <p className="text-blue-100 text-xl leading-relaxed">{program.description}</p>
+              
               
             </div>
+            <p className="text-blue-100 text-xl leading-relaxed">{program.description}</p>
           </div>
         </div>
       
