@@ -155,9 +155,9 @@ const Hero: React.FC = () => {
         {/* SECTION LOGO ET DÉCORATION */}
         <div className="mb-8">
           {/* Conteneur circulaire pour le logo avec dégradé */}
-          <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+          {/* <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
             <img src="/images/logo_version_blanc.png" alt="Logo" className="max-w-full max-h-full" />
-          </div>
+          </div> */}
           
           {/* Ligne décorative sous le logo */}
           <div className="mb-4">

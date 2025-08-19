@@ -35,7 +35,7 @@ const Header: React.FC = () => {
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-600 to-green-500 rounded-lg flex items-center justify-center">
                 <img src="/images/logo.png" alt="Description de l'image" />
               </div>
-              <div className="ml-3 hidden sm:block">
+              <div className="ml-3  sm:block">
                 <h1 className="text-sm font-bold text-gray-900">Khriststephen Saba</h1>
                 <p className="text-xs text-gray-600">International Education</p>
               </div>

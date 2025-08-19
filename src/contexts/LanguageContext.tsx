@@ -35,7 +35,7 @@ const translations: Record<string, Translation> = {
       whatsapp: 'WhatsApp'
     },
     about: {
-      title: 'À propos de nous',
+      title: 'À PROPOS DE NOUS ',
       mission: 'Notre mission est d\'accompagner les étudiants camerounais vers l\'excellence académique internationale.',
       vision: 'Être le leader en matière de services éducationnels internationaux au Cameroun.',
       values: 'Excellence, Intégrité, Innovation, Accompagnement personnalisé',

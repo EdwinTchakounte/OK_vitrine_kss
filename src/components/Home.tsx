@@ -40,7 +40,6 @@ const Home: React.FC = () => {
         <FAQ />
         
         <Contact />
-        <ScholarshipDisplay scholarshipData={chineseTeacherScholarshipData} />
          
         <WhatsAppButton />
       </div>
