@@ -16,7 +16,6 @@ import AcademicProgramsApp from './components/academic-programs-navigator';
 import EducationResults from './components/Result';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import { ProgramDetailPage } from './components/programme_details';
 import FormationPage from './components/Formation';
 
 function App() {
@@ -39,8 +38,6 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/formation" element={<FormationPage />} />
-            
-            <Route path="/detail_programme/:title/:type" element={<ProgramDetailPage/>} /> 
           </Routes>
         </main>
         <Footer />

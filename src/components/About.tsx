@@ -323,22 +323,7 @@ const About: React.FC = () => {
                 </p>
                 
                 {/* More Subtle Contact Info */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <a 
-                    href="tel:+237693461841" 
-                    className="group/phone flex items-center space-x-3 px-4 py-3 bg-white/60 hover:bg-white/80 text-blue-700 text-sm rounded-2xl transition-all duration-300 hover:shadow-lg hover:scale-105 backdrop-blur-sm border border-blue-200/50"
-                  >
-                    <Phone className="w-4 h-4 group-hover/phone:animate-pulse" />
-                    <span className="font-medium">+237 693 461 841</span>
-                  </a>
-                  <a 
-                    href="tel:+237651797376" 
-                    className="group/phone flex items-center space-x-3 px-4 py-3 bg-white/60 hover:bg-white/80 text-green-700 text-sm rounded-2xl transition-all duration-300 hover:shadow-lg hover:scale-105 backdrop-blur-sm border border-green-200/50"
-                  >
-                    <Phone className="w-4 h-4 group-hover/phone:animate-pulse" />
-                    <span className="font-medium">+237 651 797 376</span>
-                  </a>
-                </div>
+                
               </div>
             </div>
           </div>
