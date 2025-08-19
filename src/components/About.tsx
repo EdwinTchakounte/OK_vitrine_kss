@@ -139,7 +139,7 @@ const About: React.FC = () => {
               <div className="absolute -bottom-8 -right-10 w-14 h-14 border-2 border-blue-400 rounded-full opacity-40 animate-pulse"></div>
               
               <h2 className="text-4xl md:text-8xl lg:text-9xl font-black text-blue-700 mb-8 leading-tight relative tracking-tight">
-                                <span className="bg-gradient-to-r from-blue-700 via-blue-500 to-green-500 bg-clip-text text-transparent">{translations.about.title}</span>
+                <span className="bg-gradient-to-r from-blue-700 via-blue-500 to-green-500 bg-clip-text text-transparent">{translations.about.title}</span>
                 {/* Multiple glow layers for depth */}
                 <div className="absolute inset-0 text-5xl md:text-8xl lg:text-9xl font-black text-blue-300 opacity-15 blur-sm animate-pulse">
                   {translations.about.title}
@@ -188,49 +188,90 @@ const About: React.FC = () => {
             <div className="absolute top-1/2 -right-8 w-6 h-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full opacity-70 animate-ping shadow-lg" style={{ animationDelay: '2s' }}></div>
           </div>
           
-          {/* Grouped Features Block - Dynamic Display */}
+          {/* Post-it Notes Features */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-blue-50/60 to-green-50/60 backdrop-blur-xl rounded-3xl shadow-2xl"
-                 style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%)' }}></div>
-            
-            <div className="relative p-10 lg:p-12">
-              <div className="space-y-10">
-                {features.map((feature, index) => (
-                  <div 
-                    key={index} 
-                    className="group relative p-6 bg-white/70 backdrop-blur-sm hover:bg-white/90 transition-all duration-500 hover:transform hover:-translate-y-1 hover:shadow-xl rounded-2xl"
-                    style={{
-                      clipPath: index % 2 === 0 
-                        ? 'polygon(0% 0%, 90% 0%, 100% 20%, 100% 100%, 10% 100%, 0% 80%)'
-                        : 'polygon(10% 0%, 100% 0%, 100% 80%, 90% 100%, 0% 100%, 0% 20%)',
-                    }}
-                  >
-                    {/* Icon with enhanced styling */}
-                    <div className="absolute top-4 right-6 opacity-60 group-hover:opacity-80 transition-opacity">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-200/50 to-green-200/50 blur-lg rounded-full scale-150"></div>
-                      <div className="relative p-3 bg-gradient-to-br from-white via-blue-50 to-green-50 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg border border-white/50">
-                        {feature.icon}
+            <div className="space-y-8">
+              {features.map((feature, index) => (
+                <div 
+                  key={index} 
+                  className="relative group"
+                  style={{
+                    transform: `rotate(${index % 2 === 0 ? '2deg' : '-1.5deg'})`,
+                    transformOrigin: 'center top'
+                  }}
+                >
+                  {/* Post-it Note */}
+                  <div className="relative bg-gradient-to-br from-yellow-200 via-yellow-100 to-yellow-50 p-8 rounded-lg shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 border-l-4 border-yellow-300"
+                       style={{
+                         background: `linear-gradient(135deg, 
+                           #fefefe 0%, 
+                           #f8fafc 25%, 
+                           #f1f5f9 50%, 
+                           #e2e8f0 75%, 
+                           #cbd5e1 100%)`,
+                         backgroundSize: '100% 100%',
+                         filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.15))'
+                       }}>
+                    
+                    {/* Green Pin */}
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                      <div className="relative">
+                        {/* Pin Shadow */}
+                        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-black/20 rounded-full blur-sm"></div>
+                        
+                        {/* Pin Head */}
+                        <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-green-600 rounded-full shadow-lg border-2 border-green-300 relative">
+                          <div className="absolute inset-0.5 bg-gradient-to-br from-green-300 to-green-500 rounded-full"></div>
+                          <div className="absolute inset-1 bg-gradient-to-br from-green-200 to-green-400 rounded-full"></div>
+                          <div className="absolute top-1 left-1 w-1 h-1 bg-white rounded-full opacity-80"></div>
+                        </div>
+                        
+                        {/* Pin Needle */}
+                        <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-0.5 h-4 bg-gradient-to-b from-gray-400 to-gray-600 shadow-sm"></div>
                       </div>
                     </div>
-                    
-                    <div className="w-full pr-16">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4 group-hover:text-blue-700 transition-colors leading-tight">
+
+                    {/* Content */}
+                    <div className="relative pt-4">
+                      {/* Icon */}
+                      <div className="flex items-center justify-between mb-6">
+                        <div className="p-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-md border border-blue-200/40 group-hover:scale-110 transition-transform duration-300">
+                          {feature.icon}
+                        </div>
+                        
+                        {/* Subtle pattern */}
+                        <div className="text-blue-400/30 text-2xl font-bold select-none">
+                          {index === 0 && '📌'}
+                          {index === 1 && '👁️'}
+                          {index === 2 && '💝'}
+                        </div>
+                      </div>
+                      
+                      {/* Title */}
+                      <h3 className="text-2xl lg:text-3xl font-black text-gray-800 mb-4 leading-tight font-serif tracking-tight">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed text-lg lg:text-xl pr-4">
+                      
+                      {/* Content */}
+                      <p className="text-gray-700 leading-relaxed text-base lg:text-lg font-medium">
                         {feature.content}
                       </p>
                     </div>
                     
-                    {/* Subtle emoji indicators */}
-                    <div className="absolute bottom-4 right-6 text-2xl opacity-20 group-hover:opacity-40 transition-opacity">
-                      {index === 0 && '🎯'}
-                      {index === 1 && '👁️'}
-                      {index === 2 && '❤️'}
+                    {/* Subtle paper texture overlay */}
+                    <div className="absolute inset-0 opacity-20 rounded-lg pointer-events-none"
+                         style={{
+                           backgroundImage: `radial-gradient(circle at 25% 25%, transparent 0%, transparent 2%, rgba(59,130,246,0.1) 2%, rgba(59,130,246,0.1) 4%, transparent 4%), 
+                                           radial-gradient(circle at 75% 75%, transparent 0%, transparent 2%, rgba(147,197,253,0.08) 2%, rgba(147,197,253,0.08) 4%, transparent 4%)`,
+                           backgroundSize: '20px 20px'
+                         }}>
                     </div>
                   </div>
-                ))}
-              </div>
+                  
+                  {/* Hover effects */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-200/0 to-blue-300/0 group-hover:from-blue-200/10 group-hover:to-blue-300/15 rounded-lg transition-all duration-500 pointer-events-none"></div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
