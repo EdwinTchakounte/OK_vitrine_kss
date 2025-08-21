@@ -143,10 +143,19 @@ export default function StatsDashboard() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl mb-6 shadow-lg shadow-blue-500/25">
             <Sparkles className="text-white w-8 h-8" />
           </div>
+
+             <h2 className="text-4xl md:text-8xl lg:text-4xl font-black text-blue-700 mb-8 leading-tight relative tracking-tight">
+                <span className="bg-gradient-to-r from-blue-700 via-blue-500 to-green-500 bg-clip-text text-transparent">Statistiques</span>
+                {/* Multiple glow layers for depth */}
+                <div className="absolute inset-0 text-5xl md:text-8xl lg:text-9xl font-black text-blue-300 opacity-15 blur-sm animate-pulse">
+                  Statistiques
+                </div>
+                <div className="absolute inset-0 text-5xl md:text-8xl lg:text-9xl font-black text-green-300 opacity-10 blur-md animate-pulse" style={{ animationDelay: '1s' }}>
+                  Statistiques
+                </div>
+              </h2>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-green-600 to-blue-700 bg-clip-text text-transparent mb-3 tracking-tight">
-            Statistiques
-          </h1>
+     
           
           <div className="text-xl sm:text-2xl md:text-3xl font-light text-gray-700 mb-4">
             2024/2025

@@ -173,7 +173,7 @@ const Partners: React.FC = () => {
           </div>
 
           {/* Indicateurs de progression */}
-          <div className="flex justify-center space-x-1 md:space-x-2 mt-6 md:mt-8">
+          {/* <div className="flex justify-center space-x-1 md:space-x-2 mt-6 md:mt-8">
             {allPartners.map((_, index) => (
               <button
                 key={index}
@@ -189,7 +189,7 @@ const Partners: React.FC = () => {
                 }`}
               />
             ))}
-          </div>
+          </div> */}
 
           {/* Flèches de navigation pour mobile */}
           <div className="flex justify-center items-center space-x-4 mt-4 md:hidden">

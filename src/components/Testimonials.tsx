@@ -72,8 +72,21 @@ const Testimonials: React.FC = () => {
           <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-xl mb-4 shadow-lg">
             <Quote className="w-6 h-6 text-white" />
           </div>
+              <h2 className="text-4xl md:text-8xl lg:text-4xl font-black text-blue-700 mb-8 leading-tight relative tracking-tight">
+                <span className="bg-gradient-to-r from-blue-700 via-blue-500 to-green-500 bg-clip-text text-transparent">{translations?.testimonials?.title || 'Témoignages'}</span>
+                {/* Multiple glow layers for depth */}
+                <div className="absolute inset-0 text-5xl md:text-8xl lg:text-9xl font-black text-blue-300 opacity-15 blur-sm animate-pulse">
+                  {translations?.testimonials?.title || 'Témoignages'}
+                </div>
+                <div className="absolute inset-0 text-5xl md:text-8xl lg:text-9xl font-black text-green-300 opacity-10 blur-md animate-pulse" style={{ animationDelay: '1s' }}>
+                  {translations?.testimonials?.title || 'Témoignages'}
+                </div>
+              </h2>
+
+
+
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-green-800 bg-clip-text text-transparent mb-3">
-            {translations?.testimonials?.title || 'Témoignages'}
+            
           </h2>
           <p className="text-base text-gray-600 max-w-xl mx-auto leading-relaxed">
             Découvrez les expériences de nos étudiants en Chine

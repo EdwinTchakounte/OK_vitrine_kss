@@ -77,11 +77,21 @@ function Steps() {
             
             {/* Main title with enhanced styling */}
             <div className="relative">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-green-500 bg-clip-text text-transparent">
+
+
+    <h2 className="text-4xl md:text-8xl lg:text-4xl font-black text-blue-700 mb-8 leading-tight relative tracking-tight">
+                <span className="bg-gradient-to-r from-blue-700 via-blue-500 to-green-500 bg-clip-text text-transparent">{translations.steps.title}</span>
+                {/* Multiple glow layers for depth */}
+                <div className="absolute inset-0 text-5xl md:text-8xl lg:text-9xl font-black text-blue-300 opacity-15 blur-sm animate-pulse">
                   {translations.steps.title}
-                </span>
+                </div>
+                <div className="absolute inset-0 text-5xl md:text-8xl lg:text-9xl font-black text-green-300 opacity-10 blur-md animate-pulse" style={{ animationDelay: '1s' }}>
+                  {translations.steps.title}
+                </div>
               </h2>
+
+
+              
               
               {/* Subtle background text effect */}
               <div className="absolute inset-0 -z-10 opacity-5">
