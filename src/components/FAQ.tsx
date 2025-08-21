@@ -55,13 +55,8 @@ const FAQ: React.FC = () => {
         <div className="text-center mb-16">
          <h2 className="text-4xl md:text-8xl lg:text-4xl font-black text-blue-700 mb-8 leading-tight relative tracking-tight">
                 <span className="bg-gradient-to-r from-blue-700 via-blue-500 to-green-500 bg-clip-text text-transparent">{translations.faq.title}</span>
-                {/* Multiple glow layers for depth */}
-                <div className="absolute inset-0 text-5xl md:text-8xl lg:text-9xl font-black text-blue-300 opacity-15 blur-sm animate-pulse">
-                  {translations.faq.title}
-                </div>
-                <div className="absolute inset-0 text-5xl md:text-8xl lg:text-9xl font-black text-green-300 opacity-10 blur-md animate-pulse" style={{ animationDelay: '1s' }}>
-                  {translations.faq.title}
-                </div>
+
+
               </h2>
 
 
