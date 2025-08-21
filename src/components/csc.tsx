@@ -233,8 +233,9 @@ function CSC() {
                   >
                     <p className="text-gray-700 leading-relaxed mb-4">
                       Au total, 279 universités chinoises sont approuvées par le ministère de l'Éducation pour accepter les étudiants boursiers du gouvernement chinois.
+                       <p className='font-bold'>en savoir plus 👉<a href='https://forms.gle/8yDCw8iLs8a5hRYp8'><span className='text-red-700 font-bold'>cliquez ici</span> </a></p>
                     </p>
-                    <div className="grid md:grid-cols-2 gap-4">
+                    {/* <div className="grid md:grid-cols-2 gap-4">
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <h4 className="font-semibold text-green-800 mb-2">Universités de rang A (Double First-Class)</h4>
                         <ul className="text-green-700 text-sm space-y-1">
@@ -255,21 +256,21 @@ function CSC() {
                           <li>• Conservatoire central de musique</li>
                         </ul>
                       </div>
-                    </div>
+                    </div> */}
                   </motion.div>
                 )}
               </motion.div>
 
               {/* Agency Number */}
-              <motion.div
+              {/* <motion.div
                 id="agency-number"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="bg-white rounded-lg p-8 shadow-sm border border-gray-200"
-              >
-                <button
+              > */}
+                {/* <button
                   onClick={() => toggleSection('agency-number')}
                   className="w-full flex items-center justify-between text-left"
                 >
@@ -282,9 +283,9 @@ function CSC() {
                   ) : (
                     <ChevronDown className="text-blue-800" size={24} />
                   )}
-                </button>
+                </button> */}
                 
-                {expandedSections['agency-number'] && (
+                {/* {expandedSections['agency-number'] && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
@@ -315,7 +316,7 @@ function CSC() {
                     </div>
                   </motion.div>
                 )}
-              </motion.div>
+              </motion.div> */}
 
               {/* Application Documents */}
               <motion.div
@@ -418,11 +419,7 @@ function CSC() {
                         </div>
                       </li>
                     </ol>
-                    <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                      <p className="text-blue-800 font-medium">
-                        <strong>Important :</strong> Tous les documents doivent être reliés ensemble dans le coin supérieur gauche dans l'ordre de 1 à 10.
-                      </p>
-                    </div>
+                    
                   </motion.div>
                 )}
               </motion.div>

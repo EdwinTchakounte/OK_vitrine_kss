@@ -177,7 +177,7 @@ export default function StatsDashboard() {
           </StatGroup>
 
           {/* Groupe 2: Programmes & Réussites - 3 éléments sur une ligne */}
-          <StatGroup title="Programmes & Réussites" icon={TrendingUp} delay={1} columns="grid-cols-3">
+          <StatGroup title="Programmes & Réussites" icon={TrendingUp} delay={1} columns="grid-cols-2">
             {programStats.map((stat, index) => (
               <StatCard
                 key={index}
