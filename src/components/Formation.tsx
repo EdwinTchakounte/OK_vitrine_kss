@@ -6,6 +6,12 @@ const FormationPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth", // ou "auto" si tu veux direct
+          });
     setIsVisible(true);
   }, []);
 

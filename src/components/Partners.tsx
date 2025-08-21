@@ -67,8 +67,16 @@ const Partners: React.FC = () => {
 
   // Rotation automatique toutes les 4 secondes
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // ou "auto" si tu veux direct
+    });
     const interval = setInterval(() => {
+      
       handleTransition();
+
+
     }, 5000);
 
     return () => clearInterval(interval);

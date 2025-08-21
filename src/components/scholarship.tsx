@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ChevronDown, ChevronRight, Calendar, Users, FileText, Clock, Award, Globe, User, CheckCircle } from 'lucide-react';
 
 export const ScholarshipDisplay = ({ scholarshipData }) => {
@@ -13,6 +13,14 @@ export const ScholarshipDisplay = ({ scholarshipData }) => {
 
   const Section = ({ title, children, icon: Icon, sectionKey, defaultExpanded = false }) => {
     const isExpanded = expandedSections[sectionKey] ?? defaultExpanded;
+
+    useEffect(() => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth", // ou "auto" si tu veux direct
+          });
+        }, []);
       
     
     return (

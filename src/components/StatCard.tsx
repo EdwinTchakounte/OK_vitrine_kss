@@ -5,29 +5,35 @@ const StatCard = ({ icon: Icon, title, value, subtitle, delay = 0, color, bgColo
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
+
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth", // ou "auto" si tu veux direct
+          });
     const timer = setTimeout(() => setIsVisible(true), delay * 100);
     return () => clearTimeout(timer);
   }, [delay]);
 
   return (
     <div className={`${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-500 ease-out`}>
-      <div className={`${bgColor} rounded-3xl p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-lg border border-gray-100/50 transition-all duration-300 hover:-translate-y-1 group`}>
-        <div className="flex items-center justify-between mb-3 sm:mb-4 md:mb-6">
-          <div className={`p-2 sm:p-3 md:p-4 rounded-2xl ${color} bg-opacity-10 group-hover:bg-opacity-15 transition-all duration-300`}>
-            <Icon size={20} className={`sm:w-6 sm:h-6 md:w-7 md:h-7 ${color.replace('bg-', 'text-')}`} />
+      <div className={`${bgColor} rounded-xl p-3 sm:p-4 shadow-sm hover:shadow-md border border-gray-100/50 transition-all duration-300 hover:-translate-y-1 group`}>
+        <div className="flex items-center justify-between mb-2">
+          <div className={`p-2 rounded-lg ${color} bg-opacity-10 group-hover:bg-opacity-15 transition-all duration-300`}>
+            <Icon size={16} className={`sm:w-5 sm:h-5 ${color.replace('bg-', 'text-')}`} />
           </div>
-          <div className="flex-1">
-            <div className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light ${color.replace('bg-', 'text-')} tracking-tight`}>
+          <div className="flex-1 ml-2">
+            <div className={`text-lg sm:text-xl md:text-2xl font-light ${color.replace('bg-', 'text-')} tracking-tight`}>
               {value}
             </div>
-            <h3 className="text-slate-600 text-sm font-medium">
+            <h3 className="text-slate-600 text-xs sm:text-sm font-medium leading-tight">
               {title}
             </h3>
           </div>
         </div>
         
         {subtitle && (
-          <p className="text-xs sm:text-sm text-gray-500 mt-2">
+          <p className="text-xs text-gray-500 mt-1">
             {subtitle}
           </p>
         )}
@@ -36,7 +42,7 @@ const StatCard = ({ icon: Icon, title, value, subtitle, delay = 0, color, bgColo
   );
 };
 
-const StatGroup = ({ title, icon: Icon, children, delay = 0 }) => {
+const StatGroup = ({ title, icon: Icon, children, delay = 0, columns }) => {
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
@@ -46,17 +52,17 @@ const StatGroup = ({ title, icon: Icon, children, delay = 0 }) => {
 
   return (
     <div className={`${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} transition-all duration-700 ease-out`}>
-      <div className="bg-gradient-to-br from-gray-50/80 to-blue-50/30 rounded-2xl p-6 border border-blue-100/30 shadow-sm">
-        <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-white shadow-sm border border-blue-100/50">
-            <Icon size={20} className="text-blue-600" />
+      <div className="bg-gradient-to-br from-gray-50/80 to-blue-50/30 rounded-xl p-4 sm:p-5 border border-blue-100/30 shadow-sm">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="p-1.5 rounded-lg bg-white shadow-sm border border-blue-100/50">
+            <Icon size={16} className="text-blue-600" />
           </div>
-          <h2 className="text-lg font-semibold bg-gradient-to-r from-blue-700 to-green-700 bg-clip-text text-transparent">
+          <h2 className="text-base sm:text-lg font-semibold bg-gradient-to-r from-blue-700 to-green-700 bg-clip-text text-transparent">
             {title}
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className={`grid ${columns} gap-2 sm:gap-3`}>
           {children}
         </div>
       </div>
@@ -131,31 +137,31 @@ export default function StatsDashboard() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-6xl mx-auto p-8">
+      <div className="max-w-6xl mx-auto p-6 sm:p-8">
         {/* Header épuré */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl mb-8 shadow-lg shadow-blue-500/25">
-            <Sparkles className="text-white w-10 h-10" />
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl mb-6 shadow-lg shadow-blue-500/25">
+            <Sparkles className="text-white w-8 h-8" />
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-green-600 to-blue-700 bg-clip-text text-transparent mb-4 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-green-600 to-blue-700 bg-clip-text text-transparent mb-3 tracking-tight">
             Statistiques
           </h1>
           
-          <div className="text-3xl md:text-4xl font-light text-gray-700 mb-6">
+          <div className="text-xl sm:text-2xl md:text-3xl font-light text-gray-700 mb-4">
             2024/2025
           </div>
           
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
             Tableau de bord des performances académiques et suivi des résultats
           </p>
           
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-8 rounded-full"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="space-y-8">
-          {/* Groupe 1: Contact & Engagement */}
-          <StatGroup title="Contact & Engagement" icon={Users} delay={0}>
+        <div className="space-y-6">
+          {/* Groupe 1: Contact & Engagement - 4 éléments sur une ligne (2x2 sur mobile) */}
+          <StatGroup title="Contact & Engagement" icon={Users} delay={0} columns="grid-cols-2 sm:grid-cols-4">
             {contactStats.map((stat, index) => (
               <StatCard
                 key={index}
@@ -170,8 +176,8 @@ export default function StatsDashboard() {
             ))}
           </StatGroup>
 
-          {/* Groupe 2: Programmes & Réussites */}
-          <StatGroup title="Programmes & Réussites" icon={TrendingUp} delay={1}>
+          {/* Groupe 2: Programmes & Réussites - 3 éléments sur une ligne */}
+          <StatGroup title="Programmes & Réussites" icon={TrendingUp} delay={1} columns="grid-cols-3">
             {programStats.map((stat, index) => (
               <StatCard
                 key={index}
@@ -187,41 +193,35 @@ export default function StatsDashboard() {
           </StatGroup>
 
           {/* Résumé simplifié */}
-          <div className="bg-gradient-to-r from-blue-50/30 via-green-50/30 to-blue-50/30 rounded-2xl p-8 border border-blue-100/50">
-            <div className="flex items-center justify-center mb-8">
-              <TrendingUp className="text-green-600 w-6 h-6 mr-3" />
-              <h2 className="text-xl font-semibold bg-gradient-to-r from-blue-700 to-green-700 bg-clip-text text-transparent">
+          <div className="bg-gradient-to-r from-blue-50/30 via-green-50/30 to-blue-50/30 rounded-xl p-6 border border-blue-100/50">
+            <div className="flex items-center justify-center mb-6">
+              <TrendingUp className="text-green-600 w-5 h-5 mr-2" />
+              <h2 className="text-lg font-semibold bg-gradient-to-r from-blue-700 to-green-700 bg-clip-text text-transparent">
                 Résumé global
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center bg-white rounded-xl p-4 border border-blue-100/50 shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="bg-white rounded-xl sm:rounded-2xl p-2 sm:p-4 md:p-6 lg:p-8 shadow-sm border border-blue-100/50 hover:shadow-md transition-all duration-300">
-                  <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light text-blue-600 mb-1 sm:mb-2 md:mb-3">4.2K+</div>
-                  <p className="text-gray-600 font-medium text-xs sm:text-sm md:text-base">Contacts totaux</p>
-                  <div className="w-6 sm:w-8 md:w-12 h-0.5 bg-blue-500 mx-auto mt-1 sm:mt-2 md:mt-4"></div>
-                </div>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="text-center bg-white rounded-lg p-3 border border-blue-100/50 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="text-xl sm:text-2xl md:text-3xl font-light text-blue-600 mb-1">4.2K+</div>
+                <p className="text-gray-600 font-medium text-xs sm:text-sm">Contacts totaux</p>
+                <div className="w-8 h-0.5 bg-blue-500 mx-auto mt-2"></div>
               </div>
-              <div className="text-center bg-white rounded-xl p-4 border border-green-100/50 shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="bg-white rounded-xl sm:rounded-2xl p-2 sm:p-4 md:p-6 lg:p-8 shadow-sm border border-green-100/50 hover:shadow-md transition-all duration-300">
-                  <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light text-green-600 mb-1 sm:mb-2 md:mb-3">20.4%</div>
-                  <p className="text-gray-600 font-medium text-xs sm:text-sm md:text-base">Taux de conversion</p>
-                  <div className="w-6 sm:w-8 md:w-12 h-0.5 bg-green-500 mx-auto mt-1 sm:mt-2 md:mt-4"></div>
-                </div>
+              <div className="text-center bg-white rounded-lg p-3 border border-green-100/50 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="text-xl sm:text-2xl md:text-3xl font-light text-green-600 mb-1">20.4%</div>
+                <p className="text-gray-600 font-medium text-xs sm:text-sm">Taux de conversion</p>
+                <div className="w-8 h-0.5 bg-green-500 mx-auto mt-2"></div>
               </div>
-              <div className="text-center bg-white rounded-xl p-4 border border-blue-100/50 shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="bg-white rounded-xl sm:rounded-2xl p-2 sm:p-4 md:p-6 lg:p-8 shadow-sm border border-blue-100/50 hover:shadow-md transition-all duration-300">
-                  <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light text-blue-600 mb-1 sm:mb-2 md:mb-3">97%</div>
-                  <p className="text-gray-600 font-medium text-xs sm:text-sm md:text-base">Taux de réussite</p>
-                  <div className="w-6 sm:w-8 md:w-12 h-0.5 bg-blue-500 mx-auto mt-1 sm:mt-2 md:mt-4"></div>
-                </div>
+              <div className="text-center bg-white rounded-lg p-3 border border-blue-100/50 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="text-xl sm:text-2xl md:text-3xl font-light text-blue-600 mb-1">97%</div>
+                <p className="text-gray-600 font-medium text-xs sm:text-sm">Taux de réussite</p>
+                <div className="w-8 h-0.5 bg-blue-500 mx-auto mt-2"></div>
               </div>
             </div>
           </div>
         </div>
         
-        <div className="text-center mt-12 pt-8 border-t border-slate-100">
+        <div className="text-center mt-8 pt-6 border-t border-slate-100">
           <p className="text-gray-400 text-sm">
             Données en temps réel • Année académique 2024/2025
           </p>

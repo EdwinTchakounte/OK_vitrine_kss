@@ -138,7 +138,7 @@ const About: React.FC = () => {
               <div className="absolute -bottom-6 -left-6 w-12 h-12 border-2 border-purple-400 rounded-full opacity-40 animate-ping"></div>
               <div className="absolute -bottom-8 -right-10 w-14 h-14 border-2 border-blue-400 rounded-full opacity-40 animate-pulse"></div>
               
-              <h2 className="text-4xl md:text-8xl lg:text-9xl font-black text-blue-700 mb-8 leading-tight relative tracking-tight">
+              <h2 className="text-4xl md:text-8xl lg:text-4xl font-black text-blue-700 mb-8 leading-tight relative tracking-tight">
                 <span className="bg-gradient-to-r from-blue-700 via-blue-500 to-green-500 bg-clip-text text-transparent">{translations.about.title}</span>
                 {/* Multiple glow layers for depth */}
                 <div className="absolute inset-0 text-5xl md:text-8xl lg:text-9xl font-black text-blue-300 opacity-15 blur-sm animate-pulse">

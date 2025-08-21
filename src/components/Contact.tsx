@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { supabase } from '../supabaseClient';
@@ -32,6 +32,14 @@ const Contact: React.FC = () => {
       [e.target.name]: e.target.value
     }));
   };
+
+  useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth", // ou "auto" si tu veux direct
+        });
+      }, []);
 
   return (
     <section id="contact" className="py-20 bg-white">

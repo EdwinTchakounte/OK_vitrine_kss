@@ -13,10 +13,12 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import AcademicProgramsNavigator from './components/academic-programs-navigator';
 import AcademicProgramsApp from './components/academic-programs-navigator';
-import EducationResults from './components/Result';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import FormationPage from './components/Formation';
+import EnseignantChine from './components/Enseignant_chine';
+import CSC from './components/csc';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   
@@ -24,11 +26,12 @@ function App() {
   return (
     <LanguageProvider>
     <Router>
+      
       <div className="min-h-screen bg-white">
         <Header />
         <main>
           <Routes>
-          
+            
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/programmes" element={<AcademicProgramsNavigator />} />
@@ -36,8 +39,13 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/formation" element={<FormationPage />} />
+
+            <Route path="/enseignant_chine" element={<EnseignantChine/>} />
+            <Route path="/CSC" element={<CSC/>} />
+
+            
+            
           </Routes>
         </main>
         <Footer />

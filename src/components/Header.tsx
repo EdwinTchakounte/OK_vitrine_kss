@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage, languages } from '../contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,10 +9,10 @@ const Header: React.FC = () => {
   const { currentLanguage, translations, switchLanguage } = useLanguage();
 
   const navigation = [
-    { name: translations.nav.home, href: '#home' },
-    { name: translations.nav.programs, href: '#programs' },
+    { name: translations.nav.home, href: '/' },
+    { name: translations.nav.programs, href: '/programs' },
     { name: translations.nav.testimonials, href: '#testimonials' },
-    { name: translations.nav.partners, href: '#partners' },
+    { name: translations.nav.partners, href: '/partners' },
     { name: translations.nav.faq, href: '#faq' },
     { name: translations.nav.formations, href: '#bonus-ksies' },
     { name: translations.nav.contact, href: '#contact' }
@@ -45,13 +46,12 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
             {navigation.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
-              >
-                {item.name}
-              </button>
+                <Link
+                  to={item.href}
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
+                >
+                  {item.name}
+                </Link>
             ))}
           </nav>
 

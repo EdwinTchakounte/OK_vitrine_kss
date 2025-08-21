@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ChevronRight, BookOpen, Award, Globe, Users, GraduationCap, Brain, Target, Sparkles, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -112,7 +112,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
       icon: Award,
       summary: 'Bourse prestigieuse du gouvernement chinois',
       description: 'Programme prestigieux du China Scholarship Council pour excellents étudiants africains avec couverture complète.',
-      component: 'csc'
+      component: '/CSC'
     },
     {
       id: 'sigma',
@@ -160,7 +160,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
       icon: Users,
       summary: 'Bourses pour futurs enseignants de chinois',
       description: 'Programme spécialisé pour former les futurs enseignants de langue chinoise.',
-      component: 'fulbright'
+      component: '/enseignant_chine'
     },
     {
       id: 'australia-awards',
@@ -189,7 +189,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
               {program.summary}
             </p>
             <Link 
-              to={`/detail_programme/${program.component}/${activeTab === 'studies' ? '1' : '2'}`}
+              to={program.component}
               className="inline-flex items-center text-blue-600 text-xs font-medium hover:text-blue-700 transition-colors"
             >
               En savoir plus
@@ -201,6 +201,14 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
     </div>
   );
 
+  useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth", // ou "auto" si tu veux direct
+        });
+      }, []);
+
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30">
       <FloatingElements />
@@ -211,14 +219,17 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
         {/* Header simplifié */}
         <div className="text-center mb-16">
           <div className="relative inline-block">
+
+                   <h2 className="text-4xl md:text-8xl lg:text-5xl font-black text-blue-700 mb-8 leading-tight relative tracking-tight">
+                <span className="bg-gradient-to-r from-blue-700 via-blue-500 to-green-500 bg-clip-text text-transparent">Programmes d'Excellence</span></h2>
+
+
             <h1 className="text-5xl font-extralight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-green-500 mb-2 tracking-tight">
-              Programmes d'Excellence
+              
             </h1>
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-green-500 rounded-full opacity-60"></div>
           </div>
-          <p className="text-sm font-light text-blue-600/70 mb-4 tracking-widest uppercase">
-            Academic Programs Portal
-          </p>
+         
           <p className="text-base text-gray-600/80 max-w-2xl mx-auto font-light leading-relaxed">
             Découvrez nos programmes d'études et de bourses conçus pour accompagner 
             les étudiants africains vers l'excellence académique internationale
