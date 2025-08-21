@@ -11,11 +11,11 @@ const Header: React.FC = () => {
   const navigation = [
     { name: translations.nav.home, href: '/' },
     { name: translations.nav.programs, href: '/programs' },
-    { name: translations.nav.testimonials, href: '#testimonials' },
+    { name: translations.nav.testimonials, href: '/testimonials' },
     { name: translations.nav.partners, href: '/partners' },
-    { name: translations.nav.faq, href: '#faq' },
-    { name: translations.nav.formations, href: '#bonus-ksies' },
-    { name: translations.nav.contact, href: '#contact' }
+    { name: translations.nav.faq, href: '/faq' },
+    { name: translations.nav.formations, href: '/formation' },
+    { name: translations.nav.contact, href: '/contact' }
   ];
 
   const scrollToSection = (href: string) => {
@@ -111,13 +111,14 @@ const Header: React.FC = () => {
         <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
           <div className="px-4 pt-3 pb-4 space-y-2 max-h-screen overflow-y-auto">
             {navigation.map((item) => (
-              <button
+                <Link
                 key={item.name}
+                to={item.href}
                 onClick={() => scrollToSection(item.href)}
                 className="block w-full text-left px-4 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-              >
+                >
                 {item.name}
-              </button>
+                </Link>
             ))}
             <div className="pt-3 border-t border-gray-100">
               <a

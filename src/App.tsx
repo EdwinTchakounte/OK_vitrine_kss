@@ -40,7 +40,7 @@ function App() {
             <Route path="/partners" element={<Partners />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/formation" element={<FormationPage />} />
-
+            <Route path="/contact" element={<Contact />} />
             <Route path="/enseignant_chine" element={<EnseignantChine/>} />
             <Route path="/CSC" element={<CSC/>} />
 

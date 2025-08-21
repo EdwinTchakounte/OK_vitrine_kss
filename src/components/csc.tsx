@@ -354,42 +354,42 @@ function CSC() {
                       <li className="flex">
                         <span className="font-semibold text-blue-800 mr-3 mt-1">1.</span>
                         <div>
-                          <p className="font-medium">Formulaire de demande de bourse du gouvernement chinois (écrit en chinois ou en anglais)</p>
+                          <p className="font-medium">Formulaire de demande de bourse du gouvernement chinois </p>
                           <p className="text-sm text-gray-600 mt-1">Disponible sur le site officiel du CSC</p>
                         </div>
                       </li>
                       <li className="flex">
                         <span className="font-semibold text-blue-800 mr-3 mt-1">2.</span>
                         <div>
-                          <p className="font-medium">Diplôme le plus élevé notarié (photocopie)</p>
+                          <p className="font-medium">Diplôme le plus élevé notarié </p>
                           <p className="text-sm text-gray-600 mt-1">Les futurs récipiendaires d'un diplôme doivent soumettre un document officiel délivré par votre école actuelle pour prouver votre statut d'étudiant actuel ou la date prévue d'obtention de votre diplôme. Les documents rédigés dans des langues autres que le chinois ou l'anglais doivent être accompagnés de traductions notariées en chinois ou en anglais.</p>
                         </div>
                       </li>
                       <li className="flex">
                         <span className="font-semibold text-blue-800 mr-3 mt-1">3.</span>
                         <div>
-                          <p className="font-medium">Relevés de notes académiques (rédigés en chinois ou en anglais)</p>
+                          <p className="font-medium">Relevés de notes académiques </p>
                           <p className="text-sm text-gray-600 mt-1">Les relevés de notes dans des langues autres que le chinois ou l'anglais doivent être joints avec des traductions notariées en chinois ou en anglais.</p>
                         </div>
                       </li>
                       <li className="flex">
                         <span className="font-semibold text-blue-800 mr-3 mt-1">4.</span>
                         <div>
-                          <p className="font-medium">Un plan d'étude ou une proposition de recherche (rédigé en chinois ou en anglais)</p>
+                          <p className="font-medium">Un plan d'étude ou une proposition de recherche </p>
                           <p className="text-sm text-gray-600 mt-1">Il doit s'agir d'un minimum de 200 mots pour les étudiants de premier cycle, de 500 mots pour les étudiants non diplômés et de 800 mots pour les étudiants des cycles supérieurs.</p>
                         </div>
                       </li>
                       <li className="flex">
                         <span className="font-semibold text-blue-800 mr-3 mt-1">5.</span>
                         <div>
-                          <p className="font-medium">Deux lettres de recommandation (rédigées en chinois ou en anglais)</p>
+                          <p className="font-medium">Deux lettres de recommandation </p>
                           <p className="text-sm text-gray-600 mt-1">Les candidats aux programmes d'études supérieures ou aux programmes de chercheurs seniors doivent soumettre deux lettres de recommandation signées par un professeur ou un professeur agrégé.</p>
                         </div>
                       </li>
                       <li className="flex">
                         <span className="font-semibold text-blue-800 mr-3 mt-1">6.</span>
                         <div>
-                          <p className="font-medium">Un CD de vos propres œuvres (requis uniquement pour les étudiants en arts)</p>
+                          <p className="font-medium">Un CD de vos propres œuvres </p>
                           <p className="text-sm text-gray-600 mt-1">Les candidats aux études musicales sont priés de soumettre un CD de leurs propres œuvres musicales. Les candidats aux programmes de beaux-arts doivent soumettre un CD de leurs propres œuvres qui comprend deux croquis, deux peintures en couleur et deux autres œuvres.</p>
                         </div>
                       </li>
@@ -402,8 +402,8 @@ function CSC() {
                       <li className="flex">
                         <span className="font-semibold text-blue-800 mr-3 mt-1">8.</span>
                         <div>
-                          <p className="font-medium">Le formulaire d'examen physique des étrangers (photocopie)</p>
-                          <p className="text-sm text-gray-600 mt-1">Écrit en anglais, requis uniquement pour les candidats prévoyant de rester en Chine pendant plus de 6 mois. Les examens physiques doivent porter sur tous les éléments énumérés dans le formulaire d'examen physique pour étrangers. Les formulaires incomplets ou sans la signature du médecin traitant, ou le cachet officiel de l'hôpital, ou une photographie scellée du demandeur sont considérés comme non valides. Veuillez planifier soigneusement votre calendrier d'examens physiques, car le résultat n'est valide que pour 6 mois.</p>
+                          <p className="font-medium">Le formulaire d'examen physique des étrangers </p>
+                          <p className="text-sm text-gray-600 mt-1">Requis uniquement pour les candidats prévoyant de rester en Chine pendant plus de 6 mois. Les examens physiques doivent porter sur tous les éléments énumérés dans le formulaire d'examen physique pour étrangers. Les formulaires incomplets ou sans la signature du médecin traitant, ou le cachet officiel de l'hôpital, ou une photographie scellée du demandeur sont considérés comme non valides. Veuillez planifier soigneusement votre calendrier d'examens physiques, car le résultat n'est valide que pour 6 mois.</p>
                         </div>
                       </li>
                       <li className="flex">
