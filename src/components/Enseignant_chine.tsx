@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Users, Calendar, FileText, Settings, Info, ChevronDown, ChevronUp, Globe, BookOpen, Clock, Phone, MessageCircle, Award, MapPin, DollarSign, CheckCircle, UserCheck } from 'lucide-react';
+import { GraduationCap, Users, Calendar, FileText, Settings, Info, ChevronDown, ChevronUp, Globe, BookOpen, Clock, Phone, MessageCircle, Award, MapPin, DollarSign, CheckCircle, UserCheck, Target, Home, Heart } from 'lucide-react';
 
 function enseignant_chine() {
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
@@ -60,13 +60,13 @@ function enseignant_chine() {
                 <div className="text-center">
                   <p className="text-green-800 font-semibold mb-2">Contact et Information</p>
                   <a 
-                    href="https://wa.me/237694048581" 
+                    href="https://wa.me/237693461841" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
                   >
                     <Phone size={18} />
-                    <span>+237 694 048 581</span>
+                    <span>+237 693 461 841</span>
                   </a>
                   <p className="text-green-700 text-sm mt-2">WhatsApp uniquement</p>
                 </div>
@@ -132,7 +132,7 @@ function enseignant_chine() {
                     </li>
                     <li className="flex">
                       <span className="font-semibold text-blue-800 mr-3 mt-1">2.</span>
-                      <p>Soyez amical avec la Chine, n'ayez pas de casier judiciaire, respectez les lois et règlements de la Chine et les règles et règlements de l'Université</p>
+                      <p>Etre amical , Pas de casier judiciaire, respectez les lois et règlements de la Chine et les règles et règlements de l'Université</p>
                     </li>
                     <li className="flex">
                       <span className="font-semibold text-blue-800 mr-3 mt-1">3.</span>
@@ -252,6 +252,258 @@ function enseignant_chine() {
               )}
             </motion.div>
 
+            {/* Selection Criteria */}
+            <motion.div
+              id="selection-criteria"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-lg p-8 shadow-sm border border-gray-200"
+            >
+              <button
+                onClick={() => toggleSection('selection-criteria')}
+                className="w-full flex items-center justify-between text-left"
+              >
+                <h2 className="text-2xl font-bold text-blue-800 flex items-center">
+                  <Target className="mr-3" size={28} />
+                  CRITÈRES DE SÉLECTION
+                </h2>
+                {expandedSections['selection-criteria'] ? (
+                  <ChevronUp className="text-blue-800" size={24} />
+                ) : (
+                  <ChevronDown className="text-blue-800" size={24} />
+                )}
+              </button>
+              
+              {expandedSections['selection-criteria'] && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-6"
+                >
+                  <div className="space-y-6">
+                    <div className="border-l-4 border-blue-500 pl-6">
+                      <h3 className="text-xl font-semibold text-blue-700 mb-3 flex items-center">
+                        <BookOpen className="mr-2" size={20} />
+                        1) HSK LEVEL AND SCORE
+                      </h3>
+                      <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <ul className="text-blue-700 space-y-2">
+                          <li>• Niveau HSK requis selon le programme choisi</li>
+                          <li>• Score minimum spécifique pour chaque type de bourse</li>
+                          <li>• Test HSKK (oral) également évalué</li>
+                          <li>• Validité des certificats : 2 ans maximum</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="border-l-4 border-green-500 pl-6">
+                      <h3 className="text-xl font-semibold text-green-700 mb-3 flex items-center">
+                        <MapPin className="mr-2" size={20} />
+                        2) GEOGRAPHICAL DISTRIBUTION
+                      </h3>
+                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                        <ul className="text-green-700 space-y-2">
+                          <li>• Équilibre géographique des candidats sélectionnés</li>
+                          <li>• Priorité selon les régions sous-représentées</li>
+                          <li>• Considération des besoins spécifiques par pays</li>
+                          <li>• Distribution équitable des opportunités</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="border-l-4 border-purple-500 pl-6">
+                      <h3 className="text-xl font-semibold text-purple-700 mb-3 flex items-center">
+                        <Users className="mr-2" size={20} />
+                        3) AND OTHER FACTORS
+                      </h3>
+                      <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                        <ul className="text-purple-700 space-y-2">
+                          <li>• Expérience dans l'enseignement du chinois</li>
+                          <li>• Qualité du dossier académique</li>
+                          <li>• Motivation et projet professionnel</li>
+                          <li>• Recommandations des institutions partenaires</li>
+                          <li>• Engagement post-formation</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </motion.div>
+
+            {/* Results Timeline */}
+            <motion.div
+              id="results-timeline"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-lg p-8 shadow-sm border border-gray-200"
+            >
+              <button
+                onClick={() => toggleSection('results-timeline')}
+                className="w-full flex items-center justify-between text-left"
+              >
+                <h2 className="text-2xl font-bold text-blue-800 flex items-center">
+                  <Clock className="mr-3" size={28} />
+                  DÉLAIS DE SORTIE DES RÉSULTATS
+                </h2>
+                {expandedSections['results-timeline'] ? (
+                  <ChevronUp className="text-blue-800" size={24} />
+                ) : (
+                  <ChevronDown className="text-blue-800" size={24} />
+                )}
+              </button>
+              
+              {expandedSections['results-timeline'] && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-6"
+                >
+                  <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <div className="text-center">
+                      <Clock className="mx-auto text-blue-600 mb-4" size={48} />
+                      <h3 className="text-2xl font-bold text-blue-800 mb-4">03 MOIS AVANT LE DÉBUT DU PROGRAMME</h3>
+                      <p className="text-blue-700 text-lg">
+                        Les résultats de sélection seront communiqués aux candidats retenus 
+                        trois mois avant le début effectif de leur programme d'études.
+                      </p>
+                      <div className="mt-4 p-3 bg-yellow-50 rounded border border-yellow-200">
+                        <p className="text-yellow-800 text-sm">
+                          <strong>Important :</strong> Les candidats sont invités à préparer leur documentation de voyage 
+                          dès réception de leur notification d'acceptation.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </motion.div>
+
+            {/* Scholarship Benefits */}
+            <motion.div
+              id="scholarship-benefits"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-lg p-8 shadow-sm border border-gray-200"
+            >
+              <button
+                onClick={() => toggleSection('scholarship-benefits')}
+                className="w-full flex items-center justify-between text-left"
+              >
+                <h2 className="text-2xl font-bold text-blue-800 flex items-center">
+                  <Award className="mr-3" size={28} />
+                  AVANTAGES DE LA BOURSE (COVERAGE SCHOLARSHIPS)
+                </h2>
+                {expandedSections['scholarship-benefits'] ? (
+                  <ChevronUp className="text-blue-800" size={24} />
+                ) : (
+                  <ChevronDown className="text-blue-800" size={24} />
+                )}
+              </button>
+              
+              {expandedSections['scholarship-benefits'] && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-6"
+                >
+                  <div className="space-y-8">
+                    {/* Accommodation */}
+                    <div className="border-l-4 border-green-500 pl-6">
+                      <h3 className="text-xl font-semibold text-green-700 mb-4 flex items-center">
+                        <Home className="mr-2" size={24} />
+                        ACCOMMODATION
+                      </h3>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                          <h4 className="font-semibold text-green-800 mb-2">Doctorat Degree</h4>
+                          <p className="text-green-700 text-lg font-bold">1700¥</p>
+                          <p className="text-green-600 text-sm">(OFF CAMPUS)</p>
+                        </div>
+                        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                          <h4 className="font-semibold text-blue-800 mb-2">Others</h4>
+                          <p className="text-blue-700 text-lg font-bold">700¥</p>
+                          <p className="text-blue-600 text-sm">(OFF CAMPUS)</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Living Allowance */}
+                    <div className="border-l-4 border-blue-500 pl-6">
+                      <h3 className="text-xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <DollarSign className="mr-2" size={24} />
+                        LIVING ALLOWANCE
+                      </h3>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="space-y-3">
+                          <div className="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
+                            <h4 className="font-semibold text-yellow-800">Undergraduate (one year)</h4>
+                            <p className="text-yellow-700 text-lg font-bold">2500¥</p>
+                          </div>
+                          <div className="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
+                            <h4 className="font-semibold text-yellow-800">Undergraduate (one semester)</h4>
+                            <p className="text-yellow-700 text-lg font-bold">2500¥</p>
+                          </div>
+                        </div>
+                        <div className="space-y-3">
+                          <div className="bg-green-50 p-3 rounded-lg border border-green-200">
+                            <h4 className="font-semibold text-green-800">Master</h4>
+                            <p className="text-green-700 text-lg font-bold">3000¥</p>
+                          </div>
+                          <div className="bg-purple-50 p-3 rounded-lg border border-purple-200">
+                            <h4 className="font-semibold text-purple-800">Doctorat</h4>
+                            <p className="text-purple-700 text-lg font-bold">3500¥</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Medical Insurance */}
+                    <div className="border-l-4 border-red-500 pl-6">
+                      <h3 className="text-xl font-semibold text-red-700 mb-4 flex items-center">
+                        <Heart className="mr-2" size={24} />
+                        MEDICAL INSURANCE (ASSURANCE COMPLÈTE)
+                      </h3>
+                      <div className="grid md:grid-cols-3 gap-4">
+                        <div className="bg-red-50 p-4 rounded-lg border border-red-200 text-center">
+                          <h4 className="font-semibold text-red-800 mb-2">Programme 4 semaines</h4>
+                          <p className="text-red-700 text-xl font-bold">100¥</p>
+                          <p className="text-red-600 text-xs mt-1">Prime d'assurance</p>
+                        </div>
+                        <div className="bg-red-50 p-4 rounded-lg border border-red-200 text-center">
+                          <h4 className="font-semibold text-red-800 mb-2">Programme 6 mois</h4>
+                          <p className="text-red-700 text-xl font-bold">400¥</p>
+                          <p className="text-red-600 text-xs mt-1">Prime d'assurance</p>
+                        </div>
+                        <div className="bg-red-50 p-4 rounded-lg border border-red-200 text-center">
+                          <h4 className="font-semibold text-red-800 mb-2">Programme + d'un an</h4>
+                          <p className="text-red-700 text-xl font-bold">800¥</p>
+                          <p className="text-red-600 text-xs mt-1">Prime d'assurance</p>
+                        </div>
+                      </div>
+                      <div className="mt-4 p-3 bg-red-50 rounded border border-red-200">
+                        <p className="text-red-800 text-sm text-center">
+                          <strong>Couverture complète :</strong> Soins médicaux, hospitalisation, urgences
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </motion.div>
+
             {/* Coverage and Criteria */}
             <motion.div
               id="coverage-criteria"
@@ -353,14 +605,40 @@ function enseignant_chine() {
                     <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
                       <h4 className="font-semibold text-blue-800 mb-3">Dates limites pour postuler :</h4>
                       <ul className="space-y-2 text-blue-700">
-                        <li className="flex items-center">
-                          <Calendar className="mr-2" size={16} />
-                          <strong>15 mai</strong> - Pour les programmes commençant en septembre 2025
-                        </li>
-                        <li className="flex items-center">
-                          <Calendar className="mr-2" size={16} />
-                          <strong>31 octobre</strong> - Pour le programme d'études d'un semestre commençant en mars 2026 seulement
-                        </li>
+
+                      
+                            <div className="p-6 max-w-3xl mx-auto">
+      <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
+        📅 Dates Importantes
+      </h2>
+
+      <ul className="space-y-4 text-gray-700">
+        <li className="border-l-4 border-blue-500 pl-4">
+          <span className="font-medium">Délais dépôt dossier :</span> 15 mai 2025 <br />
+          <span className="font-medium">Rentrée académique :</span> Septembre 2025 (programme d'un an)
+        </li>
+
+        <li className="border-l-4 border-green-500 pl-4">
+          <span className="font-medium">Délais dépôt dossier :</span> 31 octobre 2025 <br />
+          <span className="font-medium">Rentrée académique :</span> Mars 2026 (01 semestre)
+        </li>
+
+        <li className="border-l-4 border-yellow-500 pl-4">
+          <span className="font-medium">Délais dépôt dossier :</span> 15 avril 2025 <br />
+          <span className="font-medium">Rentrée académique :</span> Juillet 2025
+        </li>
+
+        <li className="border-l-4 border-purple-500 pl-4">
+          <span className="font-medium">Délais dépôt dossier :</span> Décembre 2025 <br />
+          <span className="font-medium">Rentrée académique :</span> 15 septembre – 25 septembre 2025
+        </li>
+
+        <li className="border-l-4 border-red-500 pl-4">
+          <span className="font-medium">Délais dépôt dossier :</span> 31 octobre – 10 novembre 2025 <br />
+          <span className="font-medium">Rentrée académique :</span> Mars 2026
+        </li>
+      </ul>
+    </div>
                       </ul>
                     </div>
                   </div>
@@ -406,13 +684,13 @@ function enseignant_chine() {
                       <div>
                         <p className="text-green-800 font-semibold mb-2">Pour postuler, veuillez nous contacter via :</p>
                         <a 
-                          href="https://wa.me/237694048581" 
+                          href="https://wa.me/237693461841" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="inline-flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
                         >
                           <Phone size={18} />
-                          <span>+237 694 048 581</span>
+                          <span>+237 693 461 841</span>
                         </a>
                       </div>
                     </div>
@@ -655,13 +933,13 @@ function enseignant_chine() {
                         <p>Pour l'inscription et d'autres questions, veuillez contacter :</p>
                         <div className="mt-2">
                           <a 
-                            href="https://wa.me/237694048581" 
+                            href="https://wa.me/237693461841" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="inline-flex items-center space-x-2 bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700 transition-colors"
                           >
                             <Phone size={14} />
-                            <span>+237 694 048 581</span>
+                            <span>+237 693 461 841</span>
                           </a>
                         </div>
                       </div>
@@ -694,12 +972,12 @@ function enseignant_chine() {
               <div className="flex items-center justify-center space-x-2 mt-4">
                 <MessageCircle className="text-green-600" size={20} />
                 <a 
-                  href="https://wa.me/237694048581" 
+                  href="https://wa.me/237693461841" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-green-600 hover:text-green-700 font-medium"
                 >
-                  +237 694 048 581
+                  +237 693 461 841
                 </a>
               </div>
             </div>

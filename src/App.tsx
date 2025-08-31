@@ -19,6 +19,7 @@ import FormationPage from './components/Formation';
 import EnseignantChine from './components/Enseignant_chine';
 import CSC from './components/csc';
 import ScrollToTop from './ScrollToTop';
+import ScholarshipsCities from './components/cities';
 
 function App() {
   
@@ -43,6 +44,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/enseignant_chine" element={<EnseignantChine/>} />
             <Route path="/CSC" element={<CSC/>} />
+            <Route path="/cities" element={<ScholarshipsCities/>} />
+            
 
             
             

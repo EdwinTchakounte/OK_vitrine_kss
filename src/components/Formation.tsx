@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Award, Star, Trophy, Users, MessageCircle, BookOpen, CheckCircle, Shield, Globe, Smartphone, ArrowRight, Target, GraduationCap, Book, Lightbulb, AlignCenterVertical as Certificate } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FormationPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'infos' | 'contenu' | 'avantages'>('infos');
@@ -142,18 +143,25 @@ const FormationPage: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-lg">
-                <span className="flex items-center gap-2">
+                <Link
+                  to="/formation"
+                  className="group bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-lg flex items-center gap-2"
+                >
                   Découvrir le programme
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </span>
-              </button>
+                </Link>
               
               <button className="group border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:border-gray-300 hover:bg-gray-50">
-                <span className="flex items-center gap-2">
+                <a 
+                      href="https://wa.me/237693461841" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                    >  <span className="flex items-center gap-2">
                   <MessageCircle className="w-5 h-5" />
                   Nous contacter
-                </span>
+                </span></a>
+              
               </button>
             </div>
           </div>

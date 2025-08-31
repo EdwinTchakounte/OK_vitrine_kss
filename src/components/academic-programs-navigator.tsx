@@ -168,7 +168,7 @@ const ProgramsNavigator = ({ onProgramSelect }) => {
       icon: Globe,
       summary: 'Bourses dans le cadre des villes jumelées',
       description: 'Programme de bourses via les partenariats entre villes sœurs sino-africaines.',
-      component: 'australia-awards'
+      component: '/cities'
     }
   ];
 

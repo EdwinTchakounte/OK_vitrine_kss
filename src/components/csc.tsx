@@ -61,13 +61,13 @@ function CSC() {
                   <div className="text-center">
                     <p className="text-green-800 font-semibold mb-2">Contact et Information</p>
                     <a 
-                      href="https://wa.me/237694048581" 
+                      href="https://wa.me/237693461841" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
                     >
                       <Phone size={18} />
-                      <span>+237 694 048 581</span>
+                      <span>+237 693461841</span>
                     </a>
                     <p className="text-green-700 text-sm mt-2">WhatsApp uniquement</p>
                   </div>
@@ -186,7 +186,7 @@ function CSC() {
                       <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
                         <h4 className="font-semibold text-blue-800 mb-3">Calendrier détaillé :</h4>
                         <ul className="space-y-2 text-blue-700">
-                          <li>• <strong>Janvier :</strong> Ouverture des candidatures en ligne</li>
+                          <li>• <strong>Janvier :</strong> Ouverture des candidatures </li>
                           <li>• <strong>Février-Mars :</strong> Période principale de soumission</li>
                           <li>• <strong>Avril :</strong> Date limite de candidature</li>
                           <li>• <strong>Mai-Juin :</strong> Évaluation des dossiers</li>
@@ -354,66 +354,59 @@ function CSC() {
                       <li className="flex">
                         <span className="font-semibold text-blue-800 mr-3 mt-1">1.</span>
                         <div>
-                          <p className="font-medium">Formulaire de demande de bourse du gouvernement chinois </p>
-                          <p className="text-sm text-gray-600 mt-1">Disponible sur le site officiel du CSC</p>
+                          <p className="font-medium">Diplôme le plus élevé notarié </p>
+                          <p className="text-sm text-gray-600 mt-1">Les futurs récipiendaires d'un diplôme doivent soumettre un document officiel délivré par votre école actuelle pour prouver votre statut d'étudiant actuel ou la date prévue d'obtention de votre diplôme. </p>
                         </div>
                       </li>
                       <li className="flex">
                         <span className="font-semibold text-blue-800 mr-3 mt-1">2.</span>
                         <div>
-                          <p className="font-medium">Diplôme le plus élevé notarié </p>
-                          <p className="text-sm text-gray-600 mt-1">Les futurs récipiendaires d'un diplôme doivent soumettre un document officiel délivré par votre école actuelle pour prouver votre statut d'étudiant actuel ou la date prévue d'obtention de votre diplôme. Les documents rédigés dans des langues autres que le chinois ou l'anglais doivent être accompagnés de traductions notariées en chinois ou en anglais.</p>
+                          <p className="font-medium">Relevés de notes académiques </p>
+                          
                         </div>
                       </li>
                       <li className="flex">
                         <span className="font-semibold text-blue-800 mr-3 mt-1">3.</span>
-                        <div>
-                          <p className="font-medium">Relevés de notes académiques </p>
-                          <p className="text-sm text-gray-600 mt-1">Les relevés de notes dans des langues autres que le chinois ou l'anglais doivent être joints avec des traductions notariées en chinois ou en anglais.</p>
-                        </div>
-                      </li>
-                      <li className="flex">
-                        <span className="font-semibold text-blue-800 mr-3 mt-1">4.</span>
                         <div>
                           <p className="font-medium">Un plan d'étude ou une proposition de recherche </p>
                           <p className="text-sm text-gray-600 mt-1">Il doit s'agir d'un minimum de 200 mots pour les étudiants de premier cycle, de 500 mots pour les étudiants non diplômés et de 800 mots pour les étudiants des cycles supérieurs.</p>
                         </div>
                       </li>
                       <li className="flex">
-                        <span className="font-semibold text-blue-800 mr-3 mt-1">5.</span>
+                        <span className="font-semibold text-blue-800 mr-3 mt-1">4.</span>
                         <div>
                           <p className="font-medium">Deux lettres de recommandation </p>
                           <p className="text-sm text-gray-600 mt-1">Les candidats aux programmes d'études supérieures ou aux programmes de chercheurs seniors doivent soumettre deux lettres de recommandation signées par un professeur ou un professeur agrégé.</p>
                         </div>
                       </li>
                       <li className="flex">
-                        <span className="font-semibold text-blue-800 mr-3 mt-1">6.</span>
+                        <span className="font-semibold text-blue-800 mr-3 mt-1">5.</span>
                         <div>
                           <p className="font-medium">Un CD de vos propres œuvres </p>
                           <p className="text-sm text-gray-600 mt-1">Les candidats aux études musicales sont priés de soumettre un CD de leurs propres œuvres musicales. Les candidats aux programmes de beaux-arts doivent soumettre un CD de leurs propres œuvres qui comprend deux croquis, deux peintures en couleur et deux autres œuvres.</p>
                         </div>
                       </li>
                       <li className="flex">
-                        <span className="font-semibold text-blue-800 mr-3 mt-1">7.</span>
+                        <span className="font-semibold text-blue-800 mr-3 mt-1">6.</span>
                         <div>
                           <p className="font-medium">Documents valides de vos tuteurs légaux en Chine (requis uniquement pour les candidats de moins de 18 ans)</p>
                         </div>
                       </li>
                       <li className="flex">
-                        <span className="font-semibold text-blue-800 mr-3 mt-1">8.</span>
+                        <span className="font-semibold text-blue-800 mr-3 mt-1">7.</span>
                         <div>
                           <p className="font-medium">Le formulaire d'examen physique des étrangers </p>
                           <p className="text-sm text-gray-600 mt-1">Requis uniquement pour les candidats prévoyant de rester en Chine pendant plus de 6 mois. Les examens physiques doivent porter sur tous les éléments énumérés dans le formulaire d'examen physique pour étrangers. Les formulaires incomplets ou sans la signature du médecin traitant, ou le cachet officiel de l'hôpital, ou une photographie scellée du demandeur sont considérés comme non valides. Veuillez planifier soigneusement votre calendrier d'examens physiques, car le résultat n'est valide que pour 6 mois.</p>
                         </div>
                       </li>
                       <li className="flex">
-                        <span className="font-semibold text-blue-800 mr-3 mt-1">9.</span>
+                        <span className="font-semibold text-blue-800 mr-3 mt-1">8.</span>
                         <div>
                           <p className="font-medium">La copie de la lettre de pré-admission de l'université chinoise désignée (si disponible)</p>
                         </div>
                       </li>
                       <li className="flex">
-                        <span className="font-semibold text-blue-800 mr-3 mt-1">10.</span>
+                        <span className="font-semibold text-blue-800 mr-3 mt-1">9.</span>
                         <div>
                           <p className="font-medium">La copie du certificat HSK (le cas échéant)</p>
                         </div>
@@ -604,10 +597,10 @@ function CSC() {
                   onClick={() => toggleSection('coverage-standards')}
                   className="w-full flex items-center justify-between text-left"
                 >
-                  <h2 className="text-2xl font-bold text-blue-800 flex items-center">
-                    <DollarSign className="mr-3" size={28} />
-                    COUVERTURE ET NORME
-                  </h2>
+                    <h2 className="text-2xl font-bold text-blue-800 flex items-center">
+           
+                    COUVERTURE ET NORME (¥)
+                    </h2>
                   {expandedSections['coverage-standards'] ? (
                     <ChevronUp className="text-blue-800" size={24} />
                   ) : (
@@ -678,7 +671,7 @@ function CSC() {
                       </div>
 
                       <div className="border-l-4 border-green-500 pl-6">
-                        <h3 className="text-xl font-semibold text-green-700 mb-4">La bourse complète couvre</h3>
+                        <h3 className="text-xl font-semibold text-green-700 mb-4">Avantages Bourse Complète</h3>
                         <div className="space-y-4">
                           <div>
                             <h4 className="font-semibold text-gray-800 mb-2">1. Dispense des frais de scolarité</h4>
@@ -724,7 +717,7 @@ function CSC() {
                       </div>
 
                       <div className="border-l-4 border-orange-500 pl-6">
-                        <h3 className="text-xl font-semibold text-blue-700 mb-3">La bourse partielle couvre</h3>
+                        <h3 className="text-xl font-semibold text-blue-700 mb-3">Avantages Bourse  partielle</h3>
                         <p className="text-gray-700">
                           un ou plusieurs éléments de la bourse complète (frais de scolarité uniquement, ou allocation uniquement, ou logement uniquement, etc.).
                         </p>
@@ -753,12 +746,12 @@ function CSC() {
                 <div className="flex items-center justify-center space-x-2 mt-4">
                   <MessageCircle className="text-green-600" size={20} />
                   <a 
-                    href="https://wa.me/237694048581" 
+                href="https://wa.me/237693461841" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-green-600 hover:text-green-700 font-medium"
                   >
-                    +237 694 048 581
+                    +237 693 461 841
                   </a>
                 </div>
               </div>

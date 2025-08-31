@@ -231,7 +231,7 @@ const Partners: React.FC = () => {
           <div className="grid grid-cols-3 gap-4 md:gap-8 text-center">
             <div className="group p-4 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors duration-300">
               <div className="text-2xl md:text-4xl font-bold mb-2 md:mb-3 text-blue-600 group-hover:scale-110 transition-transform duration-300">
-                10+
+                40+
               </div>
               <p className="text-gray-700 text-xs md:text-base font-medium">Universités Collaboratives</p>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Eye, Heart, User, Phone } from 'lucide-react';
+import { Target, Eye, Heart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
@@ -24,40 +24,111 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="relative py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30 overflow-hidden">
-      {/* Enhanced Background Elements - Chinese Culture & Education */}
+    <section id="about" className="relative py-16 bg-gradient-to-br from-slate-50 via-blue-50/30 to-green-50/30 overflow-hidden">
+      {/* Enhanced Background Elements - School Tools & Education */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Graduation Caps */}
-        <div className="absolute top-20 left-16 opacity-8">
-          <svg width="60" height="50" viewBox="0 0 60 50" className="text-blue-400 animate-pulse" style={{ animationDelay: '0s', animationDuration: '4s' }}>
-            <polygon points="30,5 5,20 55,20" fill="currentColor" opacity="0.6"/>
-            <rect x="28" y="20" width="4" height="15" fill="currentColor" opacity="0.8"/>
-            <circle cx="32" cy="22" r="2" fill="currentColor" opacity="0.9"/>
-            <path d="M32,22 Q40,25 45,30" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.7"/>
+        {/* Luminous Books */}
+        <div className="absolute top-20 left-16 opacity-10">
+          <svg width="50" height="40" viewBox="0 0 80 60" className="text-blue-400 animate-pulse" style={{ animationDelay: '0s', animationDuration: '4s' }}>
+            <rect x="10" y="15" width="50" height="40" fill="currentColor" opacity="0.7" rx="3"/>
+            <rect x="15" y="20" width="40" height="30" fill="currentColor" opacity="0.5" rx="2"/>
+            <rect x="20" y="25" width="30" height="20" fill="currentColor" opacity="0.8" rx="1"/>
+            <circle cx="25" cy="35" r="8" fill="#3B82F6" opacity="0.9"/>
+            <circle cx="25" cy="35" r="4" fill="#1D4ED8" opacity="1"/>
+            <path d="M20,35 L30,35 M22,30 L28,30 M22,40 L28,40" stroke="#2563EB" strokeWidth="1" opacity="0.8"/>
           </svg>
         </div>
         
-        <div className="absolute top-60 right-24 opacity-8">
-          <svg width="50" height="42" viewBox="0 0 50 42" className="text-green-400 animate-pulse" style={{ animationDelay: '2s', animationDuration: '5s' }}>
-            <polygon points="25,4 4,16 46,16" fill="currentColor" opacity="0.6"/>
-            <rect x="23" y="16" width="4" height="12" fill="currentColor" opacity="0.8"/>
-            <circle cx="27" cy="18" r="2" fill="currentColor" opacity="0.9"/>
-            <path d="M27,18 Q35,21 40,26" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.7"/>
+        {/* Luminous Pencil */}
+        <div className="absolute top-60 right-24 opacity-10">
+          <svg width="45" height="45" viewBox="0 0 70 70" className="text-green-400 animate-pulse" style={{ animationDelay: '2s', animationDuration: '5s' }}>
+            <rect x="10" y="30" width="50" height="8" fill="currentColor" opacity="0.8" rx="4"/>
+            <polygon points="60,30 70,34 60,38" fill="#10B981" opacity="0.9"/>
+            <rect x="10" y="32" width="8" height="4" fill="#059669" opacity="1"/>
+            <circle cx="35" cy="34" r="12" fill="#22C55E" opacity="0.7"/>
+            <circle cx="35" cy="34" r="6" fill="#16A34A" opacity="0.9"/>
+            <path d="M15,34 L55,34" stroke="#15803D" strokeWidth="2" opacity="0.8"/>
           </svg>
         </div>
 
-        <div className="absolute bottom-32 left-1/4 opacity-8">
-          <svg width="55" height="46" viewBox="0 0 55 46" className="text-blue-300 animate-pulse" style={{ animationDelay: '1s', animationDuration: '6s' }}>
-            <polygon points="27,3 3,17 51,17" fill="currentColor" opacity="0.6"/>
-            <rect x="25" y="17" width="4" height="14" fill="currentColor" opacity="0.8"/>
-            <circle cx="29" cy="19" r="2" fill="currentColor" opacity="0.9"/>
-            <path d="M29,19 Q37,22 42,27" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.7"/>
+        {/* Luminous Calculator */}
+        <div className="absolute bottom-32 left-1/4 opacity-10">
+          <svg width="40" height="55" viewBox="0 0 60 80" className="text-blue-400 animate-pulse" style={{ animationDelay: '1s', animationDuration: '6s' }}>
+            <rect x="5" y="5" width="50" height="70" fill="currentColor" opacity="0.7" rx="8"/>
+            <rect x="10" y="10" width="40" height="12" fill="#E0E7FF" opacity="0.9" rx="2"/>
+            <circle cx="20" cy="35" r="4" fill="#60A5FA" opacity="0.8"/>
+            <circle cx="30" cy="35" r="4" fill="#60A5FA" opacity="0.8"/>
+            <circle cx="40" cy="35" r="4" fill="#60A5FA" opacity="0.8"/>
+            <circle cx="20" cy="50" r="4" fill="#60A5FA" opacity="0.8"/>
+            <circle cx="30" cy="50" r="4" fill="#60A5FA" opacity="0.8"/>
+            <circle cx="40" cy="50" r="4" fill="#60A5FA" opacity="0.8"/>
+            <circle cx="30" cy="65" r="8" fill="#3B82F6" opacity="1"/>
+            <circle cx="30" cy="65" r="4" fill="#1D4ED8" opacity="1"/>
+          </svg>
+        </div>
+
+        {/* Luminous Ruler */}
+        <div className="absolute top-32 right-1/3 opacity-10">
+          <svg width="65" height="15" viewBox="0 0 100 20" className="text-green-400 animate-pulse" style={{ animationDelay: '0s', animationDuration: '7s' }}>
+            <rect x="0" y="5" width="100" height="10" fill="currentColor" opacity="0.7" rx="2"/>
+            <path d="M10,5 L10,15 M20,7 L20,13 M30,5 L30,15 M40,7 L40,13 M50,5 L50,15 M60,7 L60,13 M70,5 L70,15 M80,7 L80,13 M90,5 L90,15" stroke="#22C55E" strokeWidth="1" opacity="0.9"/>
+            <circle cx="50" cy="10" r="8" fill="#10B981" opacity="0.6"/>
+            <circle cx="50" cy="10" r="4" fill="#059669" opacity="0.8"/>
+          </svg>
+        </div>
+
+        {/* Luminous Globe */}
+        <div className="absolute bottom-40 right-1/5 opacity-10">
+          <svg width="50" height="50" viewBox="0 0 80 80" className="text-blue-400 animate-pulse" style={{ animationDelay: '3s', animationDuration: '8s' }}>
+            <circle cx="40" cy="40" r="35" fill="currentColor" opacity="0.6"/>
+            <circle cx="40" cy="40" r="30" fill="#3B82F6" opacity="0.7"/>
+            <path d="M10,40 Q40,20 70,40 Q40,60 10,40" fill="#60A5FA" opacity="0.8"/>
+            <path d="M40,5 Q50,40 40,75 Q30,40 40,5" fill="#2563EB" opacity="0.8"/>
+            <circle cx="40" cy="40" r="20" fill="#DBEAFE" opacity="0.4"/>
+            <circle cx="40" cy="40" r="10" fill="#93C5FD" opacity="0.6"/>
+          </svg>
+        </div>
+
+        {/* Luminous School Bag */}
+        <div className="absolute top-1/2 left-1/8 opacity-10">
+          <svg width="45" height="60" viewBox="0 0 70 90" className="text-green-400 animate-pulse" style={{ animationDelay: '1.5s', animationDuration: '9s' }}>
+            <rect x="10" y="25" width="50" height="55" fill="currentColor" opacity="0.7" rx="8"/>
+            <rect x="15" y="15" width="40" height="15" fill="#34D399" opacity="0.8" rx="4"/>
+            <circle cx="35" cy="50" r="15" fill="#10B981" opacity="0.6"/>
+            <circle cx="35" cy="50" r="8" fill="#059669" opacity="0.8"/>
+            <rect x="20" y="35" width="30" height="3" fill="#3B82F6" opacity="0.9" rx="1"/>
+            <rect x="25" y="45" width="20" height="3" fill="#3B82F6" opacity="0.9" rx="1"/>
+            <rect x="20" y="55" width="30" height="3" fill="#3B82F6" opacity="0.9" rx="1"/>
+          </svg>
+        </div>
+
+        {/* Luminous Compass */}
+        <div className="absolute bottom-48 left-1/3 opacity-10">
+          <svg width="40" height="40" viewBox="0 0 60 60" className="text-blue-400 animate-pulse" style={{ animationDelay: '4s', animationDuration: '7s' }}>
+            <circle cx="30" cy="30" r="25" fill="currentColor" opacity="0.6"/>
+            <circle cx="30" cy="30" r="20" fill="#3B82F6" opacity="0.7"/>
+            <circle cx="30" cy="30" r="15" fill="#1D4ED8" opacity="0.8"/>
+            <path d="M30,10 L35,25 L30,30 L25,25 Z" fill="#10B981" opacity="0.9"/>
+            <path d="M30,50 L35,35 L30,30 L25,35 Z" fill="#059669" opacity="0.9"/>
+            <circle cx="30" cy="30" r="5" fill="#1F2937" opacity="1"/>
+            <circle cx="30" cy="30" r="2" fill="#F3F4F6" opacity="1"/>
+          </svg>
+        </div>
+
+        {/* Luminous Apple */}
+        <div className="absolute top-40 left-1/5 opacity-10">
+          <svg width="35" height="42" viewBox="0 0 50 60" className="text-green-500 animate-pulse" style={{ animationDelay: '2.5s', animationDuration: '6s' }}>
+            <path d="M25,15 Q35,10 40,20 Q45,40 25,55 Q5,40 10,20 Q15,10 25,15" fill="currentColor" opacity="0.8"/>
+            <path d="M25,8 Q22,5 20,8 Q22,12 25,10" fill="#10B981" opacity="0.9"/>
+            <circle cx="25" cy="35" r="15" fill="#22C55E" opacity="0.7"/>
+            <circle cx="25" cy="35" r="8" fill="#16A34A" opacity="0.9"/>
+            <ellipse cx="20" cy="25" rx="4" ry="6" fill="#3B82F6" opacity="0.6"/>
           </svg>
         </div>
 
         {/* Traditional Chinese Architecture */}
-        <div className="absolute top-32 right-1/3 opacity-8">
-          <svg width="90" height="70" viewBox="0 0 90 70" className="text-red-300 animate-pulse" style={{ animationDelay: '0s', animationDuration: '7s' }}>
+        <div className="absolute top-32 right-1/4 opacity-8">
+          <svg width="60" height="45" viewBox="0 0 90 70" className="text-blue-300 animate-pulse" style={{ animationDelay: '0s', animationDuration: '7s' }}>
             <polygon points="45,8 15,28 75,28" fill="currentColor" opacity="0.7"/>
             <rect x="20" y="28" width="50" height="35" fill="currentColor" opacity="0.5"/>
             <rect x="30" y="38" width="8" height="18" fill="currentColor" opacity="0.8"/>
@@ -67,33 +138,10 @@ const About: React.FC = () => {
             <circle cx="45" cy="48" r="3" fill="currentColor" opacity="0.9"/>
           </svg>
         </div>
-        
-        <div className="absolute bottom-40 left-1/6 opacity-8">
-          <svg width="75" height="58" viewBox="0 0 75 58" className="text-green-300 animate-pulse" style={{ animationDelay: '3s', animationDuration: '8s' }}>
-            <polygon points="37,6 12,22 62,22" fill="currentColor" opacity="0.7"/>
-            <rect x="17" y="22" width="40" height="28" fill="currentColor" opacity="0.5"/>
-            <rect x="25" y="30" width="7" height="15" fill="currentColor" opacity="0.8"/>
-            <rect x="43" y="30" width="7" height="15" fill="currentColor" opacity="0.8"/>
-            <polygon points="37,10 17,20 57,20" fill="currentColor" opacity="0.4"/>
-            <rect x="30" y="34" width="15" height="10" fill="currentColor" opacity="0.6"/>
-          </svg>
-        </div>
-
-        <div className="absolute top-1/2 left-1/8 opacity-8">
-          <svg width="80" height="62" viewBox="0 0 80 62" className="text-blue-400 animate-pulse" style={{ animationDelay: '1.5s', animationDuration: '9s' }}>
-            <polygon points="40,5 15,24 65,24" fill="currentColor" opacity="0.7"/>
-            <rect x="20" y="24" width="40" height="30" fill="currentColor" opacity="0.5"/>
-            <rect x="28" y="32" width="8" height="16" fill="currentColor" opacity="0.8"/>
-            <rect x="44" y="32" width="8" height="16" fill="currentColor" opacity="0.8"/>
-            <polygon points="40,9 20,22 60,22" fill="currentColor" opacity="0.4"/>
-            <rect x="32" y="36" width="16" height="12" fill="currentColor" opacity="0.6"/>
-            <circle cx="40" cy="42" r="2" fill="currentColor" opacity="0.9"/>
-          </svg>
-        </div>
 
         {/* Chinese Cultural Elements */}
-        <div className="absolute top-40 right-1/5 opacity-8">
-          <svg width="70" height="70" viewBox="0 0 70 70" className="text-red-400 animate-pulse" style={{ animationDelay: '2.5s', animationDuration: '6s' }}>
+        <div className="absolute top-40 right-1/6 opacity-8">
+          <svg width="45" height="45" viewBox="0 0 70 70" className="text-green-400 animate-pulse" style={{ animationDelay: '2.5s', animationDuration: '6s' }}>
             <circle cx="35" cy="35" r="30" fill="currentColor" opacity="0.3"/>
             <circle cx="35" cy="35" r="20" fill="currentColor" opacity="0.5"/>
             <circle cx="35" cy="35" r="10" fill="currentColor" opacity="0.7"/>
@@ -102,16 +150,16 @@ const About: React.FC = () => {
           </svg>
         </div>
 
-        {/* Flowing Chinese Characters - Larger and More Prominent */}
-        <div className="absolute top-24 right-1/4 text-8xl text-blue-200 opacity-12 animate-pulse select-none font-serif">学</div>
-        <div className="absolute bottom-48 left-1/3 text-7xl text-green-200 opacity-12 animate-pulse select-none font-serif" style={{ animationDelay: '1s' }}>教</div>
-        <div className="absolute top-1/2 right-1/6 text-6xl text-red-200 opacity-12 animate-pulse select-none font-serif" style={{ animationDelay: '2s' }}>育</div>
-        <div className="absolute top-1/3 left-1/5 text-5xl text-blue-300 opacity-12 animate-pulse select-none font-serif" style={{ animationDelay: '3s' }}>智</div>
-        <div className="absolute bottom-1/3 right-1/3 text-7xl text-green-300 opacity-12 animate-pulse select-none font-serif" style={{ animationDelay: '4s' }}>慧</div>
+        {/* Flowing Chinese Characters */}
+        <div className="absolute top-24 right-1/5 text-5xl text-blue-200 opacity-8 animate-pulse select-none font-serif">学</div>
+        <div className="absolute bottom-48 left-1/4 text-4xl text-green-200 opacity-8 animate-pulse select-none font-serif" style={{ animationDelay: '1s' }}>教</div>
+        <div className="absolute top-1/2 right-1/8 text-4xl text-blue-200 opacity-8 animate-pulse select-none font-serif" style={{ animationDelay: '2s' }}>育</div>
+        <div className="absolute top-1/3 left-1/6 text-3xl text-green-300 opacity-8 animate-pulse select-none font-serif" style={{ animationDelay: '3s' }}>智</div>
+        <div className="absolute bottom-1/3 right-1/4 text-4xl text-blue-300 opacity-8 animate-pulse select-none font-serif" style={{ animationDelay: '4s' }}>慧</div>
         
         {/* Geometric Patterns */}
-        <div className="absolute top-1/4 left-1/6 w-40 h-40 border-2 border-blue-200 rounded-full opacity-15 animate-spin" style={{ animationDuration: '30s' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 border-2 border-green-200 rounded-full opacity-15 animate-spin" style={{ animationDuration: '35s', animationDirection: 'reverse' }}></div>
+        <div className="absolute top-1/4 left-1/8 w-24 h-24 border-2 border-blue-200 rounded-full opacity-10 animate-spin" style={{ animationDuration: '30s' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-20 h-20 border-2 border-green-200 rounded-full opacity-10 animate-spin" style={{ animationDuration: '35s', animationDirection: 'reverse' }}></div>
         
         {/* Flowing Lines */}
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -125,150 +173,122 @@ const About: React.FC = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Enhanced Header - More Prominent */}
-        <div className="text-center mb-24">
+        {/* Enhanced Header */}
+        <div className="text-center mb-12">
           <div className="relative inline-block">
             {/* Background Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 blur-3xl rounded-full scale-150"></div>
             
             <div className="relative">
               {/* Decorative elements around title */}
-              <div className="absolute -top-12 -left-12 w-20 h-20 border-3 border-blue-400 rounded-full opacity-40 animate-spin" style={{ animationDuration: '20s' }}></div>
-              <div className="absolute -top-8 -right-8 w-16 h-16 border-3 border-green-400 rounded-full opacity-40 animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}></div>
-              <div className="absolute -bottom-6 -left-6 w-12 h-12 border-2 border-purple-400 rounded-full opacity-40 animate-ping"></div>
-              <div className="absolute -bottom-8 -right-10 w-14 h-14 border-2 border-blue-400 rounded-full opacity-40 animate-pulse"></div>
+              <div className="absolute -top-8 -left-8 w-12 h-12 border-2 border-blue-400 rounded-full opacity-30 animate-spin" style={{ animationDuration: '20s' }}></div>
+              <div className="absolute -top-6 -right-6 w-10 h-10 border-2 border-green-400 rounded-full opacity-30 animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}></div>
+              <div className="absolute -bottom-4 -left-4 w-8 h-8 border-2 border-blue-400 rounded-full opacity-30 animate-ping"></div>
+              <div className="absolute -bottom-6 -right-6 w-10 h-10 border-2 border-green-400 rounded-full opacity-30 animate-pulse"></div>
               
-              <h2 className="text-4xl md:text-8xl lg:text-4xl font-black text-blue-700 mb-8 leading-tight relative tracking-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-blue-700 mb-6 leading-tight relative tracking-tight">
                 <span className="bg-gradient-to-r from-blue-700 via-blue-500 to-green-500 bg-clip-text text-transparent">{translations.about.title}</span>
-                {/* Multiple glow layers for depth */}
-              
-                
               </h2>
               
-              {/* Enhanced decorative underline with multiple layers */}
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
-                <div className="w-60 h-3 bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 rounded-full shadow-lg">
-                  <div className="w-full h-full bg-gradient-to-r from-green-600 via-purple-600 to-blue-600 rounded-full animate-pulse opacity-80"></div>
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-1 bg-white rounded-full opacity-70 shadow-inner"></div>
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-36 h-0.5 bg-gradient-to-r from-blue-200 to-green-200 rounded-full animate-pulse"></div>
+              {/* Enhanced decorative underline */}
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+                <div className="w-40 h-2 bg-gradient-to-r from-blue-600 to-green-600 rounded-full shadow-lg">
+                  <div className="w-full h-full bg-gradient-to-r from-green-600 to-blue-600 rounded-full animate-pulse opacity-80"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-0.5 bg-white rounded-full opacity-70 shadow-inner"></div>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Enhanced subtitle */}
-          <div className="mt-16">
-            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
+          <div className="mt-10">
+            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
               Obtenez votre passeport pour la Chine
             </p>
           </div>
         </div>
 
-        {/* Main Content - Professional Layout */}
-        <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
-          {/* Enhanced Image with sophisticated styling */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-green-600/20 blur-2xl rounded-full scale-110 group-hover:scale-125 transition-transform duration-700"></div>
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-700" 
-                 style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 15%, 100% 100%, 15% 100%, 0% 85%)' }}>
-              <img
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Education"
-                className="w-full h-96 lg:h-[28rem] object-cover transform group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-green-900/10"></div>
-            </div>
-            {/* Floating decorative elements */}
-            <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full opacity-80 animate-bounce shadow-xl" style={{ animationDelay: '0.5s' }}></div>
-            <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full opacity-80 animate-bounce shadow-xl" style={{ animationDelay: '1.5s' }}></div>
-            <div className="absolute top-1/2 -right-8 w-6 h-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full opacity-70 animate-ping shadow-lg" style={{ animationDelay: '2s' }}></div>
-          </div>
-          
-          {/* Post-it Notes Features */}
-          <div className="relative">
-            <div className="space-y-8">
-              {features.map((feature, index) => (
-                <div 
-                  key={index} 
-                  className="relative group"
-                  style={{
-                    transform: `rotate(${index % 2 === 0 ? '2deg' : '-1.5deg'})`,
-                    transformOrigin: 'center top'
-                  }}
-                >
-                  {/* Post-it Note */}
-                  <div className="relative bg-gradient-to-br from-yellow-200 via-yellow-100 to-yellow-50 p-8 rounded-lg shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 border-l-4 border-yellow-300"
-                       style={{
-                         background: `linear-gradient(135deg, 
-                           #fefefe 0%, 
-                           #f8fafc 25%, 
-                           #f1f5f9 50%, 
-                           #e2e8f0 75%, 
-                           #cbd5e1 100%)`,
-                         backgroundSize: '100% 100%',
-                         filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.15))'
-                       }}>
-                    
-                    {/* Green Pin */}
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                      <div className="relative">
-                        {/* Pin Shadow */}
-                        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-black/20 rounded-full blur-sm"></div>
-                        
-                        {/* Pin Head */}
-                        <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-green-600 rounded-full shadow-lg border-2 border-green-300 relative">
-                          <div className="absolute inset-0.5 bg-gradient-to-br from-green-300 to-green-500 rounded-full"></div>
-                          <div className="absolute inset-1 bg-gradient-to-br from-green-200 to-green-400 rounded-full"></div>
-                          <div className="absolute top-1 left-1 w-1 h-1 bg-white rounded-full opacity-80"></div>
-                        </div>
-                        
-                        {/* Pin Needle */}
-                        <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-0.5 h-4 bg-gradient-to-b from-gray-400 to-gray-600 shadow-sm"></div>
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="relative pt-4">
-                      {/* Icon */}
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="p-3 bg-white/80 backdrop-blur-sm rounded-xl shadow-md border border-blue-200/40 group-hover:scale-110 transition-transform duration-300">
-                          {feature.icon}
-                        </div>
-                        
-                        {/* Subtle pattern */}
-                        <div className="text-blue-400/30 text-2xl font-bold select-none">
-                          {index === 0 && '📌'}
-                          {index === 1 && '👁️'}
-                          {index === 2 && '💝'}
-                        </div>
+        {/* Horizontal Post-it Notes Features - Compact */}
+        <div className="relative mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {features.map((feature, index) => (
+              <div 
+                key={index} 
+                className="relative group"
+                style={{
+                  transform: `rotate(${index === 0 ? '1.5deg' : index === 1 ? '-1deg' : '0.5deg'})`,
+                  transformOrigin: 'center top'
+                }}
+              >
+                {/* Post-it Note */}
+                <div className="relative bg-gradient-to-br from-yellow-200 via-yellow-100 to-yellow-50 p-6 rounded-lg shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 border-l-4 border-yellow-300 min-h-[220px]"
+                     style={{
+                       background: `linear-gradient(135deg, 
+                         #fefefe 0%, 
+                         #f8fafc 25%, 
+                         #f1f5f9 50%, 
+                         #e2e8f0 75%, 
+                         #cbd5e1 100%)`,
+                       backgroundSize: '100% 100%',
+                       filter: 'drop-shadow(4px 4px 12px rgba(0,0,0,0.15))'
+                     }}>
+                  
+                  {/* Green Pin */}
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                    <div className="relative">
+                      {/* Pin Shadow */}
+                      <div className="absolute top-1.5 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-black/20 rounded-full blur-sm"></div>
+                      
+                      {/* Pin Head with Enhanced Glow */}
+                      <div className="w-5 h-5 bg-gradient-to-br from-green-400 to-green-600 rounded-full shadow-lg border-2 border-green-300 relative">
+                        <div className="absolute inset-0.5 bg-gradient-to-br from-green-300 to-green-500 rounded-full"></div>
+                        <div className="absolute inset-0.5 bg-gradient-to-br from-green-200 to-green-400 rounded-full"></div>
+                        <div className="absolute top-0.5 left-0.5 w-1 h-1 bg-white rounded-full opacity-90"></div>
+                        {/* Luminous effect */}
+                        <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-20"></div>
                       </div>
                       
-                      {/* Title */}
-                      <h3 className="text-2xl lg:text-3xl font-black text-gray-800 mb-4 leading-tight font-serif tracking-tight">
-                        {feature.title}
-                      </h3>
-                      
-                      {/* Content */}
-                      <p className="text-gray-700 leading-relaxed text-base lg:text-lg font-medium">
-                        {feature.content}
-                      </p>
-                    </div>
-                    
-                    {/* Subtle paper texture overlay */}
-                    <div className="absolute inset-0 opacity-20 rounded-lg pointer-events-none"
-                         style={{
-                           backgroundImage: `radial-gradient(circle at 25% 25%, transparent 0%, transparent 2%, rgba(59,130,246,0.1) 2%, rgba(59,130,246,0.1) 4%, transparent 4%), 
-                                           radial-gradient(circle at 75% 75%, transparent 0%, transparent 2%, rgba(147,197,253,0.08) 2%, rgba(147,197,253,0.08) 4%, transparent 4%)`,
-                           backgroundSize: '20px 20px'
-                         }}>
+                      {/* Pin Needle */}
+                      <div className="absolute top-2.5 left-1/2 transform -translate-x-1/2 w-0.5 h-3 bg-gradient-to-b from-gray-400 to-gray-600 shadow-sm"></div>
                     </div>
                   </div>
+
+                  {/* Content */}
+                  <div className="relative pt-4">
+                    {/* Icon with Enhanced Glow */}
+                    <div className="flex items-center justify-center mb-4">
+                      <div className="p-3 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-blue-200/40 group-hover:scale-110 transition-all duration-300 relative">
+                        {feature.icon}
+                        {/* Luminous ring around icon */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-green-400/20 rounded-xl animate-pulse"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl lg:text-2xl font-black text-gray-800 mb-3 leading-tight font-serif tracking-tight text-center">
+                      {feature.title}
+                    </h3>
+                    
+                    {/* Content */}
+                    <p className="text-gray-700 leading-relaxed text-sm lg:text-base font-medium text-center">
+                      {feature.content}
+                    </p>
+                  </div>
                   
-                  {/* Hover effects */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-200/0 to-blue-300/0 group-hover:from-blue-200/10 group-hover:to-blue-300/15 rounded-lg transition-all duration-500 pointer-events-none"></div>
+                  {/* Enhanced paper texture overlay */}
+                  <div className="absolute inset-0 opacity-20 rounded-lg pointer-events-none"
+                       style={{
+                         backgroundImage: `radial-gradient(circle at 25% 25%, transparent 0%, transparent 2%, rgba(59,130,246,0.1) 2%, rgba(59,130,246,0.1) 4%, transparent 4%), 
+                                         radial-gradient(circle at 75% 75%, transparent 0%, transparent 2%, rgba(147,197,253,0.08) 2%, rgba(147,197,253,0.08) 4%, transparent 4%)`,
+                         backgroundSize: '15px 15px'
+                       }}>
+                  </div>
                 </div>
-              ))}
-            </div>
+                
+                {/* Enhanced hover effects */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-200/0 to-blue-300/0 group-hover:from-blue-200/10 group-hover:to-blue-300/15 rounded-lg transition-all duration-500 pointer-events-none"></div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -276,50 +296,44 @@ const About: React.FC = () => {
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-white/90 to-green-600/5 blur-sm"></div>
           <div 
-            className="relative bg-gradient-to-br from-white/95 via-blue-50/70 to-green-50/70 backdrop-blur-xl p-12 md:p-16 lg:p-20 overflow-hidden group hover:shadow-3xl transition-all duration-700 rounded-3xl shadow-2xl border border-white/50"
+            className="relative bg-gradient-to-br from-white/95 via-blue-50/70 to-green-50/70 backdrop-blur-xl p-8 md:p-10 lg:p-12 overflow-hidden group hover:shadow-3xl transition-all duration-700 rounded-2xl shadow-2xl border border-white/50"
             style={{ clipPath: 'polygon(0% 10%, 90% 0%, 100% 90%, 10% 100%)' }}
           >
             {/* Enhanced Background Pattern */}
             <div className="absolute inset-0 opacity-6">
-              <div className="absolute top-8 right-16 text-9xl lg:text-[12rem] text-blue-600 select-none animate-pulse font-serif" style={{ animationDelay: '1s' }}>智</div>
-              <div className="absolute bottom-8 left-16 text-7xl lg:text-[10rem] text-green-600 select-none animate-pulse font-serif" style={{ animationDelay: '2s' }}>慧</div>
+              <div className="absolute top-6 right-12 text-6xl lg:text-8xl text-blue-600 select-none animate-pulse font-serif" style={{ animationDelay: '1s' }}>智</div>
+              <div className="absolute bottom-6 left-12 text-5xl lg:text-7xl text-green-600 select-none animate-pulse font-serif" style={{ animationDelay: '2s' }}>慧</div>
               
               {/* Additional decorative elements */}
-              <div className="absolute top-1/4 left-1/4 w-24 h-24 border-2 border-blue-300 rounded-full opacity-20 animate-spin" style={{ animationDuration: '40s' }}></div>
-              <div className="absolute bottom-1/4 right-1/4 w-20 h-20 border-2 border-green-300 rounded-full opacity-20 animate-spin" style={{ animationDuration: '35s', animationDirection: 'reverse' }}></div>
+              <div className="absolute top-1/4 left-1/4 w-16 h-16 border-2 border-blue-300 rounded-full opacity-15 animate-spin" style={{ animationDuration: '40s' }}></div>
+              <div className="absolute bottom-1/4 right-1/4 w-12 h-12 border-2 border-green-300 rounded-full opacity-15 animate-spin" style={{ animationDuration: '35s', animationDirection: 'reverse' }}></div>
             </div>
             
-            <div className="relative flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-16">
+            <div className="relative flex flex-col items-center text-center space-y-6">
               {/* Enhanced Avatar */}
               <div className="relative flex-shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-green-500/30 blur-2xl rounded-full scale-150"></div>
-                <div className="w-44 h-44 lg:w-52 lg:h-52 bg-gradient-to-br from-blue-600 via-purple-600 to-green-600 p-1.5 group-hover:rotate-3 transition-transform duration-500 shadow-2xl rounded-3xl"
+                <div className="w-32 h-32 lg:w-36 lg:h-36 bg-gradient-to-br from-blue-600 to-green-600 p-1.5 group-hover:rotate-3 transition-transform duration-500 shadow-2xl rounded-2xl"
                      style={{ clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)' }}>
-                  <div className="w-full h-full bg-gradient-to-br from-white via-blue-50 to-green-50 flex items-center justify-center rounded-3xl" 
+                  <div className="w-full h-full bg-gradient-to-br from-white via-blue-50 to-green-50 flex items-center justify-center rounded-2xl" 
                        style={{ clipPath: 'polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)' }}>
-                    <User className="w-24 h-24 lg:w-28 lg:h-28 text-blue-600" />
+                    <img src="ceo.PNG" alt="" />
                   </div>
                 </div>
                 {/* Enhanced floating elements */}
-                <div className="absolute -top-4 -right-4 w-6 h-6 bg-gradient-to-br from-green-500 to-green-600 rounded-full animate-bounce shadow-lg" style={{ animationDelay: '0.5s' }}></div>
-                <div className="absolute -bottom-4 -left-4 w-5 h-5 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full animate-bounce shadow-lg" style={{ animationDelay: '1.5s' }}></div>
-                <div className="absolute top-1/2 -right-6 w-4 h-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full animate-ping shadow-lg" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute -top-3 -right-3 w-4 h-4 bg-gradient-to-br from-green-500 to-green-600 rounded-full animate-bounce shadow-lg" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute -bottom-3 -left-3 w-3 h-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full animate-bounce shadow-lg" style={{ animationDelay: '1.5s' }}></div>
+                <div className="absolute top-1/2 -right-4 w-3 h-3 bg-gradient-to-br from-blue-500 to-green-500 rounded-full animate-ping shadow-lg" style={{ animationDelay: '2s' }}></div>
               </div>
               
               {/* Enhanced Content */}
-              <div className="text-center lg:text-left flex-grow">
-                <h3 className="text-2xl lg:text-3xl font-black text-gray-800 mb-4 group-hover:text-blue-700 transition-colors leading-tight">
-                  {translations.about.founder}
-                </h3>
-                <h4 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-700 via-purple-700 to-green-700 bg-clip-text text-transparent mb-6 leading-tight">
+              <div className="flex-grow">
+                <h4 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-700 to-green-700 bg-clip-text text-transparent mb-4 leading-tight">
                   {translations.about.founderName}
                 </h4>
-                <p className="text-gray-600 mb-10 leading-relaxed text-base lg:text-lg font-medium">
+                <p className="text-gray-600 mb-6 leading-relaxed text-base lg:text-lg font-medium max-w-2xl mx-auto">
                   {translations.about.founderTitle}
                 </p>
-                
-                {/* More Subtle Contact Info */}
-                
               </div>
             </div>
           </div>
